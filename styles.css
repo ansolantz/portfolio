@@ -162,7 +162,7 @@ a { color: inherit; text-decoration: none; }
 .experience-row strong { font-weight: 500; }
 
 .contact { padding-top: 140px; padding-bottom: 140px; border-top: 1px solid var(--line); }
-.contact h2 { max-width: 980px; }
+.contact h2 { max-width: 980px; font-size: 38px;}
 .contact-actions { display: flex; flex-wrap: wrap; gap: 28px 42px; margin-top: 58px; }
 .contact-actions a { padding-bottom: 3px; border-bottom: 1px solid currentColor; }
 .site-footer { display: grid; grid-template-columns: 1fr 1fr auto; gap: 20px; padding-top: 30px; padding-bottom: 30px; border-top: 1px solid var(--line); font-size: 12px; color: var(--muted); }
@@ -262,7 +262,7 @@ a { color: inherit; text-decoration: none; }
 .earlier-card span { display: block; margin-bottom: 6px; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .08em; }
 .earlier-card h3 { margin: 0 0 8px; font: 500 20px/1.2 "Manrope", sans-serif; letter-spacing: -.025em; }
 .earlier-card p { margin: 0; color: #4d4a45; font-size: 13px; line-height: 1.55; }
-.ironhack-card { display: flex; flex-direction: column; justify-content: flex-end; background: #ece8ff; }
+.ironhack-card { display: flex; flex-direction: column; justify-content: flex-end; background:  #eeece7; }
 .ironhack-mark { min-height: 190px; display: flex; align-items: center; justify-content: center; padding: 0 !important; font: 500 58px/1 "Manrope", sans-serif; letter-spacing: -.08em; }
 .foodini-grid img { object-fit: cover; }
 @media (max-width: 900px) { .earlier-work-grid { grid-template-columns: 1fr; } .earlier-card img, .ironhack-mark { height: auto; min-height: 160px; } }
@@ -274,7 +274,7 @@ html, body { max-width: 100%; overflow-x: hidden; }
 .hero-shot img { width: 100%; height: clamp(470px, 58vw, 760px); max-height: 760px; object-fit: cover; }
 
 /* Habits auto-rotating screenshot carousel */
-.habits-carousel { position: relative; margin-top: auto; height: 390px; overflow: hidden; min-width: 0; }
+.habits-carousel { position: relative; margin-top: auto; height: 370px; overflow: hidden; min-width: 0; }
 .product-cards .habits-carousel img { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; object-fit: contain; object-position: center bottom; opacity: 0; transition: opacity .7s ease; }
 .product-cards .habits-carousel img.active { opacity: 1; }
 
