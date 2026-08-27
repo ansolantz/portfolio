@@ -45,6 +45,10 @@ a { color: inherit; text-decoration: none; }
 .contact-link { padding-bottom: 2px; border-bottom: 1px solid currentColor; }
 
 .section-shell { max-width: var(--max); margin: 0 auto; padding-left: var(--pad); padding-right: var(--pad); }
+
+.section-shell h2 {  color: var(--accent); }
+
+   
 .hero { min-height: 78vh; display: flex; flex-direction: column; justify-content: space-between; padding-top: clamp(90px, 12vw, 165px); padding-bottom: 72px; }
 .eyebrow { margin: 0 0 24px; font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
 .display { max-width: 1050px; margin: 0; font: 500 clamp(44px, 6.1vw, 88px)/1.02 "Manrope", sans-serif; letter-spacing: -.055em; }
@@ -111,7 +115,7 @@ a { color: inherit; text-decoration: none; }
 .one-up img { aspect-ratio: auto; }
 
 .editorial-break { display: grid; grid-template-columns: 1.05fr .95fr; gap: 96px; padding-top: 130px; padding-bottom: 130px; border-top: 1px solid var(--line); }
-.big-quote { font: 500 clamp(48px, 6vw, 84px)/1.03 "Manrope", sans-serif; letter-spacing: -.05em; color: var(--accent); }
+.big-quote { font: 500 clamp(48px, 6vw, 72px)/1.03 "Manrope", sans-serif; letter-spacing: -.05em; color: var(--accent); }
 .two-col-copy h3 { margin: 0 0 24px; font: 500 32px/1.2 "Manrope", sans-serif; letter-spacing: -.03em; }
 .two-col-copy p { margin: 0; font-size: 18px; line-height: 1.65; color: #514f4a; }
 
@@ -162,7 +166,7 @@ a { color: inherit; text-decoration: none; }
 .experience-row strong { font-weight: 500; }
 
 .contact { padding-top: 140px; padding-bottom: 140px; border-top: 1px solid var(--line); }
-.contact h2 { max-width: 980px; font-size: 38px;}
+.contact h2 { max-width: 980px; font-size: 44px;}
 .contact-actions { display: flex; flex-wrap: wrap; gap: 28px 42px; margin-top: 58px; }
 .contact-actions a { padding-bottom: 3px; border-bottom: 1px solid currentColor; }
 .site-footer { display: grid; grid-template-columns: 1fr 1fr auto; gap: 20px; padding-top: 30px; padding-bottom: 30px; border-top: 1px solid var(--line); font-size: 12px; color: var(--muted); }
@@ -422,3 +426,17 @@ html, body { max-width: 100%; overflow-x: hidden; }
   .livewell-ds-video { padding-bottom: 60px; }
   .koa-collage-single .koa-main img { max-height: none; }
 }
+
+/* Recommendations */
+.recommendations{padding-top:120px;padding-bottom:120px;border-top:1px solid var(--line)}
+.recommendations-heading{display:grid;grid-template-columns:.75fr 1.25fr;gap:70px;margin-bottom:58px}
+.recommendations-heading h2{margin:0;font:500 clamp(42px,5.4vw,76px)/1 "Manrope",sans-serif;letter-spacing:-.055em}
+.recommendation-card{max-width:980px;margin-left:auto;padding:38px 0 0;border-top:1px solid var(--line)}
+.quote-mark{font:500 82px/.7 Georgia,serif;color:var(--accent);margin-bottom:26px}
+.recommendation-card blockquote{margin:0;max-width:900px;font:500 clamp(28px,3.4vw,48px)/1.22 "Manrope",sans-serif;letter-spacing:-.035em; color:#3f3e3b; font-style: italic;}
+.recommendation-note{max-width:700px;margin:28px 0 0;color:var(--muted);font-size:13px;line-height:1.55}
+.recommendation-link{display:inline-block;margin-top:24px;padding-bottom:3px;border-bottom:1px solid currentColor;font-size:13px}
+@media(max-width:900px){.recommendations-heading{grid-template-columns:1fr;gap:20px}}
+@media(max-width:600px){.recommendations{padding-top:90px;padding-bottom:90px}.recommendation-card{padding-top:35px}.quote-mark{font-size:68px}}
+
+
