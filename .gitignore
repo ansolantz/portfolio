@@ -3,6 +3,7 @@
 
 .DS_Store
 /assets/.DS_Store
+/old/
 
 # Miscellaneous
 *.class
@@ -12,7 +13,6 @@
 *.swp
 .buildlog/
 .history
-
 
 
 # Flutter repo-specific

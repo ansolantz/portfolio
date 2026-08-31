@@ -523,3 +523,143 @@ html, body { max-width: 100%; overflow-x: hidden; }
     max-width: none;
   }
 }
+
+
+/* LiveWell: compact Design System bridge + stronger product-development section */
+.livewell-system-bridge {
+  display: grid;
+  grid-template-columns: .75fr 1.25fr;
+  gap: 74px;
+  align-items: start;
+  padding-top: 58px;
+  padding-bottom: 58px;
+  border-top: 1px solid var(--line);
+}
+
+.livewell-system-bridge .eyebrow {
+  margin: 5px 0 0;
+}
+
+.livewell-system-copy {
+  max-width: 680px;
+}
+
+.livewell-system-copy h3 {
+  margin: 0 0 14px;
+  font: 500 clamp(28px, 3vw, 40px)/1.12 "Manrope", sans-serif;
+  letter-spacing: -.035em;
+}
+
+.livewell-system-copy p {
+  margin: 0;
+  max-width: 620px;
+  color: #514f4a;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.livewell-product-work .eyebrow {
+  margin-bottom: 24px;
+}
+
+.livewell-product-work .big-quote {
+  font-size: clamp(42px, 5vw, 64px);
+}
+
+.livewell-product-work .two-col-copy p + p {
+  margin-top: 26px;
+}
+
+@media (max-width: 900px) {
+  .livewell-system-bridge {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .livewell-system-bridge .eyebrow {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .livewell-system-bridge {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .livewell-product-work .big-quote {
+    font-size: clamp(36px, 11vw, 50px);
+  }
+}
+
+
+/* LiveWell: compact Design System bridge + stronger product-development section */
+.livewell-system-bridge {
+  display: grid;
+  grid-template-columns: .75fr 1.25fr;
+  gap: 74px;
+  align-items: start;
+  padding-top: 58px;
+  padding-bottom: 58px;
+  border-top: 1px solid var(--line);
+}
+
+.livewell-system-bridge .eyebrow {
+  margin: 5px 0 0;
+}
+
+.livewell-system-copy {
+  max-width: 680px;
+}
+
+.livewell-system-copy h3 {
+  margin: 0 0 14px;
+  font: 500 clamp(28px, 3vw, 40px)/1.12 "Manrope", sans-serif;
+  letter-spacing: -.035em;
+}
+
+.livewell-system-copy p {
+  margin: 0;
+  max-width: 620px;
+  color: #514f4a;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.livewell-product-work .eyebrow {
+  margin-bottom: 24px;
+}
+
+.livewell-product-work .big-quote {
+  font-size: clamp(42px, 5vw, 64px);
+}
+
+.livewell-product-work .two-col-copy p + p {
+  margin-top: 26px;
+}
+
+@media (max-width: 900px) {
+  .livewell-system-bridge {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .livewell-system-bridge .eyebrow {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .livewell-system-bridge {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .livewell-product-work .big-quote {
+    font-size: clamp(36px, 11vw, 50px);
+  }
+}
