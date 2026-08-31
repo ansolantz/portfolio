@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <link rel="icon" type="image/png" href="assets/favicon.png">
+  <meta name="description" content="Ann-Sofi Lantz, Senior Flutter Engineer specialising in Flutter and Design Systems." />
+  <title>Ann-Sofi Lantz | Senior Flutter Engineer · Design System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Ann-Sofi Lantz home">ASL.</a>
+    <nav aria-label="Primary navigation">
+      <a href="#work">Work</a>
+      <a href="#design-systems">Design Systems</a>
+      <a href="#about">About</a>
+      <a class="contact-link" href="mailto:anso.lantz@gmail.com">Get in touch</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section-shell">
+      <p class="eyebrow reveal">Senior Flutter Engineer · Design Systems</p>
+      <h1 class="display reveal">I build digital products where <span>design and engineering</span> meet.</h1>
+      <div class="hero-bottom reveal">
+        <p class="hero-copy">I’m a Flutter developer focused on building products and Design Systems that are easy to maintain, reuse and evolve. I enjoy working closely with designers to turn Figma designs into accessible components and real product experiences.</p>
+        <div class="hero-meta">
+          <span>Barcelona, Spain</span>
+          <span>Flutter · Dart · Design Systems</span>
+          <span>Mobile · Web · Desktop</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero-gallery" aria-label="Selected product work">
+      <figure class="hero-shot hero-shot-a"><img src="assets/livewell-2.jpeg" alt="LiveWell app shown on two phones" /></figure>
+      <figure class="hero-shot hero-shot-b"><img src="assets/foundations.jpeg" alt="Koa Foundations app in use on a phone" /></figure>
+      <figure class="hero-shot hero-shot-c"><img src="assets/habits-1.png" alt="Koa Habits app daily overview" /></figure>
+    </section>
+
+    <section id="work" class="section-shell work-index">
+      <div class="section-kicker">Selected work</div>
+      <div class="work-list">
+        <a class="work-row" href="#livewell">
+          <span class="work-number">01</span>
+          <span class="work-name">LiveWell by Zurich</span>
+          <span class="work-tags">Design System · Flutter · Product Development</span>
+          <span class="work-arrow">↘</span>
+        </a>
+        <a class="work-row" href="#zgv">
+          <span class="work-number">02</span>
+          <span class="work-name">Zurich Global Ventures</span>
+          <span class="work-tags">Multi-app ecosystem · Design Systems</span>
+          <span class="work-arrow">↘</span>
+        </a>
+        <a class="work-row" href="#koa">
+          <span class="work-number">03</span>
+          <span class="work-name">Koa Health</span>
+          <span class="work-tags">Digital health · Flutter · Cross-product DS</span>
+          <span class="work-arrow">↘</span>
+        </a>
+        <a class="work-row" href="#natural-machines">
+          <span class="work-number">04</span>
+          <span class="work-name">Natural Machines</span>
+          <span class="work-tags">Foodini · Flutter · React · Embedded UI</span>
+          <span class="work-arrow">↘</span>
+        </a>
+      </div>
+    </section>
+
+
+    <section id="design-systems" class="design-systems-feature section-shell">
+      <div class="ds-intro">
+        <p class="eyebrow">Specialist area</p>
+        <h2>Design Systems</h2>
+        <p class="ds-lede">A recurring focus throughout my work has been turning design decisions into scalable, reusable frontend systems. I have led frontend Design System development, built Flutter component libraries and reference applications, and worked closely with designers in Figma to keep design and code aligned.</p>
+      </div>
+
+      <div class="ds-pillars">
+        <div class="ds-pillar"><span>01</span><h3>Design + code as one system</h3><p>I work closely with designers from the component definition stage, translating Figma specifications into reusable Flutter APIs. Naming, component structure and tokens are intentionally aligned across Figma and code so designers and developers share the same language.</p></div>
+        <div class="ds-pillar"><span>02</span><h3>Reusable Flutter libraries</h3><p>I have led frontend development of Design System libraries covering foundations, themes and reusable components across multiple applications. I focus on composition, predictable behaviour and APIs that are clear for product developers to understand and use correctly.</p></div>
+        <div class="ds-pillar"><span>03</span><h3>Reference app + documentation</h3><p>The library is supported by a reference application where teams can explore components, variants and states in one place. I document components and APIs carefully so the system is useful beyond the team that originally built it.</p></div>
+        <div class="ds-pillar"><span>04</span><h3>Quality built into the system</h3><p>I implemented golden testing around component demos to automatically detect visual regressions. Accessibility, interaction states, dark mode and cross-platform behaviour are treated as part of the component contract rather than product-by-product fixes.</p></div>
+      </div>
+
+      <div class="ds-demo">
+        <div class="ds-demo-copy">
+          <p class="section-number">How I work</p>
+          <h3>From Figma specification to tested component.</h3>
+          <p>Design tokens bridge visual decisions and implementation, including colour, typography, spacing, sizing and radius. Components are then built once, documented, demonstrated in the reference app and protected with automated visual tests before adoption in products.</p>
+          <div class="ds-flow" aria-label="Design System workflow"><span>Figma</span><b>→</b><span>Tokens</span><b>→</b><span>Flutter API</span><b>→</b><span>Reference app</span><b>→</b><span>Golden tests</span></div>
+        </div>
+        <div class="ds-demo-media">
+          <video autoplay muted loop playsinline controls poster="assets/livewell-components.png">
+            <source src="assets/ds-demo-2x.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+
+      <section class="image-grid section-shell compact-top">
+        <figure class="wide"><img src="assets/livewell-components-1.png" alt="LiveWell design system component overview" /><figcaption>Reusable components as the building blocks of the product.</figcaption></figure>
+         <figure><img src="assets/livewell-tokens.png" alt="LiveWell design tokens presentation" /><figcaption>Tokens connect visual decisions to scalable code.</figcaption></figure>
+        <figure><img src="assets/livewell-dark-mode.png" alt="Light and dark mode screens side by side" /><figcaption>Dark mode designed into the system from the start.</figcaption></figure>
+      </section>
+
+            <section class="livewell-ds-video section-shell" aria-label="LiveWell Design System demo">
+     
+        <video autoplay muted loop playsinline controls poster="assets/livewell-before-after.png">
+          <source src="assets/livewell-ds.mp4" type="video/mp4" />
+          <source src="assets/livewell-ds.mov" type="video/quicktime" />
+        </video>
+      </section>
+
+      <div class="ds-outcomes">
+        <div><strong>One source of truth</strong><p>Shared foundations and components reduce duplicated UI decisions and keep experiences consistent across products.</p></div>
+        <div><strong>Faster product work</strong><p>Teams can focus on feature-specific problems instead of repeatedly rebuilding and styling common UI.</p></div>
+        <div><strong>Safer change</strong><p>Centralised tokens, components and tests make system-wide changes easier to propagate and visual regressions easier to catch.</p></div>
+      </div>
+    </section>
+
+    <article id="livewell" class="case-study">
+      <section class="case-hero section-shell">
+        <div class="case-title-wrap">
+          <p class="eyebrow">Case study 01</p>
+          <h2>LiveWell by Zurich</h2>
+          <p class="case-lede">Building a Design System from the ground up while contributing to a large health and wellbeing product.</p>
+        </div>
+        <div class="case-facts">
+          <div><span>Role</span><strong>Senior Flutter Developer</strong></div>
+          <div><span>Focus</span><strong>Design System, product development</strong></div>
+          <div><span>Technology</span><strong>Flutter, Dart, Riverpod</strong></div>
+          <div><span>Platform</span><strong>Android, iOS & web</strong></div>
+        </div>
+      </section>
+
+      <section class="full-bleed media-panel blue-panel"><img src="assets/livewell.jpg" alt="LiveWell visual identity shown across two phone mockups" /></section>
+
+      <section class="case-grid section-shell">
+        <aside class="case-nav" aria-label="LiveWell case study sections">
+          <a href="#livewell-context"><span>01</span> Context</a>
+          <a href="#livewell-role"><span>02</span> My work</a>
+          <a href="#livewell-system"><span>03</span> The system</a>
+          <a href="#livewell-outcome"><span>04</span> Outcome</a>
+        </aside>
+        <div class="case-content">
+          <section id="livewell-context" class="case-section">
+            <span class="section-number">01</span>
+            <h3>Creating a shared foundation</h3>
+            <p>I built and evolved the LiveWell Design System from the ground up, working closely with design and product teams to establish a consistent visual and technical foundation. The work combined system thinking with hands-on product development, so the Design System had to work in real product flows rather than as an isolated component library.</p>
+          </section>
+
+          <section id="livewell-role" class="case-section">
+            <span class="section-number">02</span>
+            <h3>From foundations to product adoption</h3>
+            <div class="feature-list">
+              <div><span>Foundations</span><p>Defined color, typography, spacing, sizing, radius, icons and dark mode as reusable foundations.</p></div>
+              <div><span>Components</span><p>Built reusable Flutter components and tokens with well-structured APIs, clear conventions and maintainability in mind.</p></div>
+              <div><span>Accessibility</span><p>Incorporated accessibility into components and design standards instead of treating it as a later layer.</p></div>
+              <div><span>Adoption</span><p>Worked with product teams to replace legacy components and gradually move the app towards the new system.</p></div>
+              <div><span>Product work</span><p>Contributed directly to features while solving UX issues, technical debt and cross-squad implementation challenges.</p></div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="full-bleed media-panel blue-panel"><img src="assets/livewell-before-after.png" alt="LiveWell app screens showing the product before and after the Design System work" /></section>
+
+
+      <section id="livewell-system" class="editorial-break section-shell">
+        <div class="big-quote">Design System = design + code</div>
+        <div class="two-col-copy">
+          <h3>A system for how products look, behave and scale.</h3>
+          <p>The Design System brought together foundations, components, patterns, guidelines, code and governance. For designers it created a shared set of rules and decisions. For developers it created reusable code, theming and cross-platform consistency.</p>
+        </div>
+      </section>
+
+                <section id="livewell-system" class="editorial-break section-shell">
+        <div class="big-quote">Product work</div>
+        <div class="two-col-copy">
+          <h3>From shared components to a working product experience.</h3>
+          <p>Alongside the Design System, I contributed to product features including health and activity tracking. Working on both sides helped keep the components grounded in real user flows rather than designing the library in isolation.
+
+</p>
+        </div>
+      </section>
+
+
+
+
+      <section id="livewell-outcome" class="case-outcome section-shell">
+        <p class="eyebrow">04 · Outcome</p>
+        <h3>A more consistent, accessible and scalable product experience.</h3>
+        <p>The Design System made it easier for teams to build and maintain new features while moving the product toward higher reuse and consistency.</p>
+        <ul class="outcome-list">
+          <li>Increased reuse led to 30% lower development time.</li>
+          <li>Designer satisfaction increased since busy work was removed and the app finally matched the Figma specification.</li>
+          <li>A consistent foundation meant a more professional looking product.</li>
+          <li>Huge reduction in code base size when hundreds of custom components were replaced with a reusable foundation.</li>
+        </ul>
+
+
+
+    
+      </section>
+    </article>
+
+
+      <section class="principles section-shell koa-principles">
+        <div class="principle"><span>01</span><h4>Accessibility</h4><p>Make experiences usable and inclusive for people with different needs and abilities.</p></div>
+        <div class="principle"><span>02</span><h4>Consistency</h4><p>Create a recognisable experience across products without blocking product-specific needs.</p></div>
+        <div class="principle"><span>03</span><h4>Flexibility</h4><p>Support different product needs and user journeys.</p></div>
+        <div class="principle"><span>04</span><h4>Scalability</h4><p>Allow new products and features to build on the same reliable foundation.</p></div>
+      </section>
+    <article id="zgv" class="case-study muted-case">
+      <section class="case-hero section-shell">
+        <div class="case-title-wrap">
+          <p class="eyebrow">Case study 02</p>
+          <h2>Zurich Global Ventures</h2>
+          <p class="case-lede">Taking the Design System one step further, from a single product to a multi-app ecosystem.</p>
+        </div>
+        <div class="case-facts">
+          <div><span>Focus</span><strong>Shared product infrastructure</strong></div>
+          <div><span>Core idea</span><strong>One system, multiple apps</strong></div>
+          <div><span>Approach</span><strong>Reusable and brand-aware</strong></div>
+        </div>
+      </section>
+
+  
+      <section class="split-story section-shell">
+        <div>
+          <p class="section-number">01</p>
+          <h3>From product to ecosystem</h3>
+        </div>
+        <div>
+          <p>After LiveWell, I worked on the next step of the Design System approach within Zurich Global Ventures. The goal was to create a shared foundation that could be reused across multiple apps while still allowing each product to maintain its own identity.</p>
+          <p>The challenge shifted from creating consistency within one product to exploring how a Design System could support multiple products, teams and visual identities without losing the benefits of reuse.</p>
+        </div>
+      </section>
+
+      <section class="zgv-ds-visual section-shell">
+        <figure>
+          <img src="assets/zgv-ds.png" alt="ZGV Design System component library and visual foundations" />
+          <figcaption>A shared Design System foundation connecting visual rules, components and implementation.</figcaption>
+        </figure>
+      </section>
+
+
+      <section class="principles section-shell">
+        <div class="principle"><span>01</span><h4>Share what should be shared</h4><p>Core building blocks and conventions reduce repeated effort across teams.</p></div>
+        <div class="principle"><span>02</span><h4>Keep products flexible</h4><p>A shared system should enable product identity, not flatten every experience into the same UI.</p></div>
+        <div class="principle"><span>03</span><h4>Build for maintenance</h4><p>Improvements to shared foundations can benefit multiple apps instead of being solved repeatedly.</p></div>
+      </section>
+    </article>
+
+    <article id="koa" class="case-study koa-case">
+      <section class="case-hero section-shell">
+        <div class="case-title-wrap">
+          <p class="eyebrow">Case study 03</p>
+          <h2>Koa Health</h2>
+          <p class="case-lede">A Design System used across several digital health products.</p>
+        </div>
+        <div class="case-facts">
+          <div><span>Role</span><strong>Flutter Developer · Design System</strong></div>
+          <div><span>Products</span><strong>Foundations, Mindset, Habits</strong></div>
+          <div><span>Technology</span><strong>Flutter, Dart, Provider, Riverpod</strong></div>
+          <div><span>Context</span><strong>Digital mental health</strong></div>
+        </div>
+      </section>
+
+      <section class="koa-collage koa-collage-single section-shell">
+        <figure class="koa-main"><img src="assets/koa.jpg" alt="Koa Foundations app shown on a phone" /></figure>
+
+      </section>
+
+      <section class="split-story section-shell">
+        <div><p class="section-number">01</p><h3>One system, different products</h3></div>
+        <div>
+          <p>At Koa Health, I worked with a Design System supporting a growing portfolio of digital health products, each with different audiences, purposes and clinical contexts.</p>
+          <p>The challenge was not simply creating consistency within one product. It was building a flexible and accessible foundation that could scale across multiple products while maintaining a coherent Koa Health experience.</p>
+        </div>
+      </section>
+
+      <section class="product-cards section-shell">
+        <article>
+          <span>01 · Foundations</span>
+          <h4>Mental health support</h4>
+          <p>A digital mental health product designed to support users with evidence-based tools and experiences for improving mental wellbeing.</p>
+          <img src="assets/foundations.jpeg" alt="Koa Foundations recommended programmes screen" />
+        </article>
+        <article>
+          <span>02 · Mindset</span>
+          <h4>Prescription digital therapeutic</h4>
+          <p>A clinically focused digital therapeutic that could be prescribed or recommended by psychologists, combining digital experiences with clinically backed interventions.</p>
+          <img src="assets/mindset.jpg" alt="Koa Mindset thought triggers screen" />
+        </article>
+        <article>
+          <span>03 · Habits</span>
+          <h4>Research app</h4>
+          <p>A research-focused application designed to support digital health research and explore user behaviours and interventions, including smartphone sensor data used in machine learning projects.</p>
+          <div class="habits-carousel" aria-label="Koa Habits app screens">
+            <img class="active" src="assets/habits-carousel-1.png" alt="Koa Habits daily overview" />
+            <img src="assets/habits-carousel-2.png" alt="Koa Habits activity tracking" />
+            <img src="assets/habits-carousel-3.png" alt="Koa Habits sleep trends" />
+          </div>
+        </article>
+      </section>
+
+      <section class="principles section-shell koa-principles">
+        <div class="principle"><span>01</span><h4>Accessibility</h4><p>Make experiences usable and inclusive for people with different needs and abilities.</p></div>
+        <div class="principle"><span>02</span><h4>Consistency</h4><p>Create a recognisable experience across products without blocking product-specific needs.</p></div>
+        <div class="principle"><span>03</span><h4>Flexibility</h4><p>Support different product needs and user journeys.</p></div>
+        <div class="principle"><span>04</span><h4>Scalability</h4><p>Allow new products and features to build on the same reliable foundation.</p></div>
+      </section>
+
+    </article>
+
+
+    <article id="natural-machines" class="case-study natural-machines-case">
+      <section class="case-hero section-shell">
+        <div class="case-title-wrap">
+          <p class="eyebrow">Case study 04</p>
+          <h2>Natural Machines</h2>
+          <p class="case-lede">Designing and building the user experience for Foodini, a 3D food printer with its interface running directly on an integrated Android tablet.</p>
+        </div>
+        <div class="case-facts">
+          <div><span>Role</span><strong>JavaScript / Flutter Developer</strong></div>
+          <div><span>Product</span><strong>Foodini 3D food printer</strong></div>
+          <div><span>Technology</span><strong>React, JavaScript, Flutter, Dart, Provider</strong></div>
+        </div>
+      </section>
+
+      <section class="full-bleed media-panel foodini-panel"><img src="assets/foodini-kitchen.webp" alt="Foodini 3D food printer in a kitchen environment" /></section>
+
+      <section class="split-story section-shell">
+        <div><p class="section-number">01</p><h3>A very different kind of product interface</h3></div>
+        <div>
+          <p>Foodini is a 3D food printer, which meant designing for an experience very different from a conventional mobile or desktop application. The interface had to make an unfamiliar physical process feel understandable and approachable on the machine's integrated touchscreen.</p>
+          <p>I worked initially with React and JavaScript, then helped build the next generation UI in Flutter as the product moved to a new cross-platform codebase.</p>
+        </div>
+      </section>
+      <section class="image-grid section-shell foodini-grid">
+         <figure><img src="assets/foodini-machine.jpg" alt="Foodini printer with integrated touchscreen" /><figcaption>The UI runs directly on Foodini's integrated Android tablet.</figcaption></figure>
+        <figure><img src="assets/foodini-ui-1.png" alt="Foodini fillings interface on the integrated tablet" /><figcaption>Foodini UI designed for the integrated Android tablet.</figcaption></figure>
+       <!--<figure><img src="assets/foodini-ui-2.png" alt="Foodini icing detail interface on the integrated tablet" /><figcaption>Touch-first controls for configuring ingredients and printer settings.</figcaption></figure>--> 
+      </section>
+
+      <section class="principles section-shell">
+        <div class="principle"><span>01</span><h4>Physical + digital</h4><p>The UI was part of a real appliance, connecting software interactions with a physical printing process.</p></div>
+        <div class="principle"><span>02</span><h4>Make the unfamiliar clear</h4><p>The experience needed to guide users through a new way of preparing food without making the technology feel complicated.</p></div>
+        <div class="principle"><span>03</span><h4>React to Flutter</h4><p>The product gave me early hands-on experience moving an existing interface from React and JavaScript to Flutter.</p></div>
+      </section>
+    </article>
+
+    <section id="about" class="about section-shell">
+      <div class="about-heading">
+        <p class="eyebrow">About</p>
+        <h2>Flutter developer with a strong Design Systems focus.</h2>
+      </div>
+      <div class="about-copy">
+        <p>Flutter has been my main technology for the past six years. My specialty sits at the intersection of design and engineering, translating design decisions into maintainable code through reusable component APIs, clear documentation and close collaboration with designers.</p>
+        <p>I care deeply about maintainability and quality. My experience includes application architecture, Riverpod, CI workflows, automated testing including golden tests, release processes and hands-on product development across mobile and web applications.</p>
+        <p>I am based in Barcelona and experienced in remote, distributed and async-friendly environments.</p>
+      </div>
+    </section>
+
+    <section class="experience section-shell">
+      <p class="eyebrow">Experience snapshot</p>
+      <div class="experience-row"><span>2023 - Present</span><strong>Senior Flutter Developer</strong><em>LiveWell by Zurich</em></div>
+      <div class="experience-row"><span>2020 - 2023</span><strong>Flutter Developer</strong><em>Koa Health</em></div>
+      <div class="experience-row"><span>2020</span><strong>Flutter Developer</strong><em>Telefonica Alpha</em></div>
+      <div class="experience-row"><span>2019 - 2020</span><strong>JavaScript / Flutter Developer</strong><em>Natural Machines</em></div>
+      <div class="experience-row"><span>Earlier</span><strong>Full-stack development, founder, design</strong><em>Spain and Sweden</em></div>
+    </section>
+
+    
+
+    <section class="earlier-work section-shell">
+      <div class="earlier-work-heading">
+        <p class="eyebrow">Earlier work &amp; foundations</p>
+        <h2>More project visuals</h2>
+        <p>A small selection from earlier work that shaped my mix of engineering, design and product thinking.</p>
+      </div>
+      <div class="earlier-work-grid">
+        <article class="earlier-card">
+          <img src="assets/givensa-cup.jpg" alt="Givensa design work and press materials" />
+          <div><span>Founder · Givensa.com</span><h3>E-commerce, design &amp; content</h3><p>Founded and built an e-commerce business, covering HTML/CSS web and graphic design, print and advertising assets, SEO-friendly content, blog production and social media.</p></div>
+        </article>
+        <article class="earlier-card compact-card">
+          <img src="assets/givensa-elle-current.png" alt="ELLE Decor feature showing Givensa" />
+          <div><span>Press feature</span><h3>ELLE Decor</h3><p>Givensa was featured by ELLE Decor as one of its recommended online design shops.</p></div>
+        </article>
+        <article class="earlier-card ironhack-card">
+          <img src="assets/ironhack.jpg" alt="Ironhack Barcelona campus" />
+          <div><span>Ironhack · Barcelona</span><h3>Web Development Bootcamp</h3><p>Intensive hands-on training that strengthened my modern web development foundations before moving deeper into product engineering.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="recommendations" class="recommendations section-shell">
+      <div class="recommendations-heading">
+        <p class="eyebrow">Recommendations</p>
+        <h2>What colleagues say.</h2>
+      </div>
+      <div class="recommendation-card">
+        <div class="quote-mark">“</div>
+        <blockquote>Her work has significantly reduced build time for the team while improving consistency and reliability across the product.</blockquote>
+   
+        <a class="recommendation-link" href="https://www.linkedin.com/in/ann-sofi-lantz/details/recommendations/" target="_blank" rel="noreferrer">View recommendations on LinkedIn ↗</a>
+      </div>
+    </section>
+
+    
+
+    <section class="contact section-shell">
+      <p class="eyebrow">Get in touch</p>
+      <h2>Interested in building a thoughtful product together?</h2>
+      <div class="contact-actions">
+        <a href="https://linkedin.com/in/ann-sofi-lantz" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        <a href="https://github.com/ansolantz" target="_blank" rel="noreferrer">GitHub ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-shell"><span>Ann-Sofi Lantz</span><span>Senior Flutter Engineer · Barcelona</span><a href="#top">Back to top ↑</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>
