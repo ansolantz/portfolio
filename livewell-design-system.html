@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <meta name="description"
+    content="How Ann-Sofi Lantz built the LiveWell Design System from shared design foundations to a reusable Flutter component library." />
+  <title>LiveWell Design System | Ann-Sofi Lantz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="ds-page">
+  <a class="ds-skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Ann-Sofi Lantz home">AL.</a>
+    <nav aria-label="Primary navigation"><a href="index.html#work">Work</a><a href="index.html#design-systems">Design
+        Systems</a><a href="index.html#about">About</a><a href="index.html#contact">Get in touch</a></nav>
+  </header>
+  <main id="main">
+    <section class="ds-case-hero section-shell" id="top">
+      <a class="ds-text-link" href="index.html#design-systems">Back to portfolio</a>
+      <p class="eyebrow">LiveWell by Zurich · Design + Flutter engineering</p>
+      <h1>One system.<br>From <span>design to code.</span></h1>
+      <p class="ds-case-lede">Building the LiveWell Design System from the ground up: shared visual foundations,
+        reusable Flutter components and the tools to bring them into the product.</p>
+      <dl class="ds-role-grid">
+        <div>
+          <dt>My responsibility</dt>
+          <dd>Flutter architecture &amp; implementation<br>Full ownership from the start</dd>
+        </div>
+        <div>
+          <dt>Design collaboration</dt>
+          <dd>Foundations &amp; component definitions<br>Built together with a designer</dd>
+        </div>
+        <div>
+          <dt>Deliverables</dt>
+          <dd>Component library, themes &amp; tokens<br>API documentation &amp; reference app</dd>
+        </div>
+      </dl>
+    </section>
+    <figure class="ds-cover section-shell"><img src="assets/livewell-components-1.png"
+        alt="LiveWell component library including buttons, inputs, typography, activity cards and rewards patterns"
+        width="1720" height="914" fetchpriority="high" />
+      <figcaption>A shared set of building blocks for the LiveWell experience.</figcaption>
+    </figure>
+    <nav class="ds-section-nav section-shell" aria-label="Case study sections"><a href="#context">Context &amp;
+        role</a><a href="#foundations">Foundations</a><a href="#flutter">Flutter architecture</a><a
+        href="#components">Components</a><a href="#accessibility">Accessibility</a><a href="#outcome">In the product</a>
+    </nav>
+
+    <section id="context" class="ds-story section-shell">
+      <div>
+        <p class="eyebrow">Context &amp; role</p>
+        <h2>Building the foundation, together.</h2>
+      </div>
+      <div class="ds-prose">
+        <p>As LiveWell evolved, the interface needed a more consistent foundation. Repeated UI decisions and
+          individually styled components made it harder to keep the product coherent as new features were added.</p>
+        <p>I built the Design System from the beginning, working with a designer to define its foundations and component
+          specifications. I was fully responsible for the Flutter library: its architecture, component implementation
+          and technical conventions.</p>
+        <p>My work also included product features and the migration of existing screens. That kept the library grounded
+          in the needs of the app, with feedback from implementation informing the system as it grew.</p>
+      </div>
+    </section>
+
+    <section id="foundations" class="ds-foundations section-shell">
+      <div class="ds-section-heading">
+        <p class="eyebrow">Foundations</p>
+        <h2>Shared decisions,<br>expressed in design and Dart.</h2>
+        <p>Colour, typography, spacing, sizing, radius, elevation and iconography form the vocabulary of the system.
+          Matching names in Figma and Flutter help keep implementation and design discussions connected.</p>
+      </div>
+      <div class="ds-foundation-grid">
+        <article>
+          <h3>Colour with a purpose</h3>
+          <p>Surface and foreground roles sit alongside primary, neutral, semantic and data palettes. Light and dark
+            themes provide different values through the same colour API.</p>
+          <figure><a href="assets/livewell-color-palettes.jpg" aria-label="Open the LiveWell colour palettes image"><img
+                src="assets/livewell-color-palettes.jpg"
+                alt="LiveWell light and dark colour palettes with semantic success, warning, error, info and insight tokens"
+                loading="lazy" /></a>
+            <figcaption>Shared palettes and semantic roles in Figma. Select the image to inspect it.</figcaption>
+          </figure>
+        </article>
+        <article>
+          <h3>Typography &amp; layout rules</h3>
+          <p>The type scale maps to Flutter’s text theme. Named spacing, size and radius values give components a
+            consistent structure without repeating individual measurements throughout the app.</p>
+          <figure><a href="assets/livewell-type-scale.jpg" aria-label="Open the LiveWell typography scale image"><img
+                src="assets/livewell-type-scale.jpg"
+                alt="LiveWell typography scale showing display, headline, title, body and label styles in regular and medium weights"
+                loading="lazy" /></a>
+            <figcaption>Type styles with explicit sizes, weights and line heights.</figcaption>
+          </figure>
+          <div class="ds-token-names"><code>LDSSpacing</code><code>LDSSize</code><code>LDSRadius</code></div>
+        </article>
+      </div>
+
+      <nav class="ds-component-index" aria-label="Design foundations"><a href="#spacing-sizes">Spacing &amp; sizes</a><a
+          href="#iconography">Iconography</a><a href="#elevation">Elevation &amp; shadows</a></nav>
+      <article id="spacing-sizes" class="ds-component-showcase">
+        <div class="ds-gallery-heading">
+          <div>
+            <p class="eyebrow">Spacing &amp; sizes</p>
+            <h3>A measurable rhythm for the interface.</h3>
+          </div>
+          <p>Named spacing, size and radius values turn layout decisions into reusable rules. A shared pixel scale keeps
+            the space within components and the relationships between sections consistent.</p>
+        </div>
+        <div class="ds-measurement-grid">
+          <div class="ds-scale-panel">
+            <h4>Spacing scale · pixels</h4>
+            <ul class="ds-spacing-scale">
+              <li><code>xxxs</code><span class="ds-spacing-bar" style="--space-value:2px"
+                  aria-hidden="true"></span><span>2 px</span></li>
+              <li><code>xxs</code><span class="ds-spacing-bar" style="--space-value:4px"
+                  aria-hidden="true"></span><span>4 px</span></li>
+              <li><code>xs</code><span class="ds-spacing-bar" style="--space-value:8px"
+                  aria-hidden="true"></span><span>8 px</span></li>
+              <li><code>s</code><span class="ds-spacing-bar" style="--space-value:12px"
+                  aria-hidden="true"></span><span>12 px</span></li>
+              <li><code>m</code><span class="ds-spacing-bar" style="--space-value:16px"
+                  aria-hidden="true"></span><span>16 px</span></li>
+              <li><code>mp</code><span class="ds-spacing-bar" style="--space-value:20px"
+                  aria-hidden="true"></span><span>20 px</span></li>
+              <li><code>l</code><span class="ds-spacing-bar" style="--space-value:24px"
+                  aria-hidden="true"></span><span>24 px</span></li>
+              <li><code>xl</code><span class="ds-spacing-bar" style="--space-value:32px"
+                  aria-hidden="true"></span><span>32 px</span></li>
+              <li><code>xxl</code><span class="ds-spacing-bar" style="--space-value:40px"
+                  aria-hidden="true"></span><span>40 px</span></li>
+              <li><code>xxxl</code><span class="ds-spacing-bar" style="--space-value:64px"
+                  aria-hidden="true"></span><span>64 px</span></li>
+            </ul>
+            <p>Values from the Flutter <code>LDSSpacing</code> scale.</p>
+          </div>
+          <div class="ds-scale-panel">
+            <h4>Sizes &amp; corner radius</h4>
+            <p><code>LDSSize</code> provides named dimensions for components, including 16, 20, 24, 32, 40 and 48 px.
+            </p>
+            <div class="ds-radius-examples">
+              <div style="--sample-radius:4px"><span>4 px</span></div>
+              <div style="--sample-radius:8px"><span>8 px</span></div>
+              <div style="--sample-radius:16px"><span>16 px</span></div>
+              <div style="--sample-radius:24px"><span>24 px</span></div>
+              <div style="--sample-radius:32px"><span>32 px</span></div>
+            </div>
+            <p>Shared corner radii from <code>LDSRadius</code>. The layout guidance uses 16 px for cards and 32 px for
+              the main content container.</p>
+            <p class="ds-pixel-note">All measurements in this case study are shown in pixels (px), using design and
+              Flutter layout values.</p>
+          </div>
+        </div>
+        <div class="ds-layout-gallery">
+          <figure class="ds-component-figure"><a href="assets/livewell-layout-container.png"
+              aria-label="Open full-size image: Main container layout with 24 px padding and section spacing, and a 32 px top corner radius"><img
+                src="assets/livewell-layout-container.png"
+                alt="Main container layout with 24 px padding and section spacing, and a 32 px top corner radius"
+                loading="lazy" /></a>
+            <figcaption>Container structure: 24 px padding and section gaps. <a
+                href="assets/livewell-layout-container.png">View full size</a></figcaption>
+          </figure>
+          <figure class="ds-component-figure"><a href="assets/livewell-layout-sections.png"
+              aria-label="Open full-size image: Content layout showing 16 px card radius and content gaps, 24 px section gaps and 8 px between buttons"><img
+                src="assets/livewell-layout-sections.png"
+                alt="Content layout showing 16 px card radius and content gaps, 24 px section gaps and 8 px between buttons"
+                loading="lazy" /></a>
+            <figcaption>Within sections: 16 px content gaps and 8 px between buttons. <a
+                href="assets/livewell-layout-sections.png">View full size</a></figcaption>
+          </figure>
+          <figure class="ds-component-figure"><a href="assets/livewell-layout-safe-area.png"
+              aria-label="Open full-size image: Safe content area guidance with 16 px clearance below the status bar and 40 px above the bottom system area"><img
+                src="assets/livewell-layout-safe-area.png"
+                alt="Safe content area guidance with 16 px clearance below the status bar and 40 px above the bottom system area"
+                loading="lazy" /></a>
+            <figcaption>Safe areas: documented clearances of 16 px and 40 px. <a
+                href="assets/livewell-layout-safe-area.png">View full size</a></figcaption>
+          </figure>
+        </div>
+        <p class="ds-implementation-note"><strong>In Flutter:</strong> <code>LDSSpacing</code>, <code>LDSSize</code> and
+          <code>LDSRadius</code> expose the shared values to product code, keeping padding, component dimensions and
+          corner treatments aligned.
+        </p>
+      </article>
+      <article id="iconography" class="ds-component-showcase">
+        <div class="ds-gallery-heading">
+          <div>
+            <p class="eyebrow">Iconography</p>
+            <h3>Consistent at every size.</h3>
+          </div>
+          <p>The icon library covers navigation, health, activity and common interface actions. Shared geometry, size
+            options and theme colours keep icons visually connected to the rest of the system.</p>
+        </div>
+        <div class="ds-icon-galleries">
+          <figure class="ds-component-figure"><a href="assets/livewell-icons-light.png"
+              aria-label="Open full-size image: LiveWell icon library in the light theme, covering health, navigation, activity and interface actions"><img
+                src="assets/livewell-icons-light.png"
+                alt="LiveWell icon library in the light theme, covering health, navigation, activity and interface actions"
+                loading="lazy" /></a>
+            <figcaption>Light theme · shared foreground colour. <a href="assets/livewell-icons-light.png">View full
+                size</a></figcaption>
+          </figure>
+          <figure class="ds-component-figure"><a href="assets/livewell-icons-dark.png"
+              aria-label="Open full-size image: LiveWell icon library in the dark theme"><img
+                src="assets/livewell-icons-dark.png" alt="LiveWell icon library in the dark theme" loading="lazy" /></a>
+            <figcaption>Dark theme · the same icon vocabulary. <a href="assets/livewell-icons-dark.png">View full
+                size</a></figcaption>
+          </figure>
+        </div>
+        <div class="ds-icon-guidance">
+          <figure class="ds-component-figure"><a href="assets/livewell-icon-geometry.png"
+              aria-label="Open full-size image: Icon construction diagrams showing a 20 by 20 px live area with 2 px padding inside a 24 by 24 px frame"><img
+                src="assets/livewell-icon-geometry.png"
+                alt="Icon construction diagrams showing a 20 by 20 px live area with 2 px padding inside a 24 by 24 px frame"
+                loading="lazy" /></a>
+            <figcaption>Icon construction: live area and padding are specified separately. <a
+                href="assets/livewell-icon-geometry.png">View full size</a></figcaption>
+          </figure>
+          <div class="ds-prose">
+            <h4>Geometry, sizing &amp; implementation</h4>
+            <p>A 24 × 24 px icon frame contains a 20 × 20 px live area with 2 px padding around it. This gives different
+              symbols a common alignment reference.</p>
+            <p>The size scale defines five options: 16 × 16 px, 20 × 20 px, 24 × 24 px, 32 × 32 px and 40 × 40 px.</p>
+            <p>The design guidance specifies rounded Material Symbols with weight 300 and no fill. Custom icon strokes
+              use 1.5 px and the shared foreground colour.</p>
+            <p>In Flutter, <code>LDSIcon</code> provides the shared icon component, while <code>LDSCustomIcons</code>
+              makes the library’s glyphs available to buttons, inputs and other components.</p>
+          </div>
+        </div>
+      </article>
+      <article id="elevation" class="ds-component-showcase">
+        <div class="ds-gallery-heading">
+          <div>
+            <p class="eyebrow">Elevation &amp; shadows</p>
+            <h3>Depth with a shared definition.</h3>
+          </div>
+          <p>No shadow, top shadow and bottom shadow provide distinct surface treatments. Central definitions keep depth
+            consistent across cards and other content surfaces.</p>
+        </div>
+        <figure class="ds-component-figure"><a href="assets/livewell-elevation-shadows.png"
+            aria-label="Open full-size image: Three surface treatments: no shadow, top shadow and bottom shadow"><img
+              src="assets/livewell-elevation-shadows.png"
+              alt="Three surface treatments: no shadow, top shadow and bottom shadow" loading="lazy" /></a>
+          <figcaption>Neutral shadow treatments for shared surfaces. <a
+              href="assets/livewell-elevation-shadows.png">View full size</a></figcaption>
+        </figure>
+        <p class="ds-implementation-note"><strong>In Flutter:</strong> <code>DesignSystemShadowsTheme</code> defines
+          reusable <code>BoxShadow</code> lists. The top treatment combines 10 px and 2 px blur layers; the bottom
+          treatment uses the same blur values with vertical offsets of 5 px and 2 px.</p>
+      </article>
+    </section>
+
+    <section id="flutter" class="ds-engineering">
+      <div class="section-shell">
+        <div class="ds-section-heading">
+          <p class="eyebrow">Flutter architecture</p>
+          <h2>A library that belongs<br>in the widget tree.</h2>
+          <p>I structured the system around a dedicated theme, named foundations and composable widgets. Product code
+            consumes the system through a consistent API.</p>
+        </div>
+        <div class="ds-architecture" aria-label="Library architecture">
+          <div><strong>DesignSystemApp</strong><span>Provides the system in the widget tree</span></div>
+          <div><strong>DesignSystemThemeData</strong><span>Colours, shadows and font weights</span></div>
+          <div><strong>LDS components</strong><span>Reusable widgets for product screens</span></div>
+        </div>
+        <div class="ds-engineering-grid">
+          <article>
+            <h3>Context-aware theming</h3>
+            <p><code>DesignSystemTheme.of(context)</code> resolves the closest system theme. Light and dark palettes are
+              selected in the theme data, so components use shared colour roles.</p>
+            <p>The theme deliberately exposes a limited set of options for LiveWell. This keeps the API focused on one
+              product while leaving a place for future component theming.</p>
+          </article>
+          <div class="ds-code">
+            <p>Theme access · Dart</p>
+            <pre><code>final colors =
+    DesignSystemTheme.of(context).colors;
+
+colors.surface
+colors.onSurface
+colors.primary.shade20
+colors.semantic.error</code></pre><span>Selected API usage from the library documentation.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="components" class="ds-components section-shell">
+      <div class="ds-section-heading">
+        <p class="eyebrow">Component decisions</p>
+        <h2>Behaviour is part<br>of the component.</h2>
+        <p>A component needs to describe how it behaves as well as how it looks. Explicit variants and states make those
+          decisions reusable across product screens.</p>
+      </div>
+      <div class="ds-engineering-grid">
+        <article>
+          <h3>Buttons with explicit states</h3>
+          <p>Primary, secondary, text and danger buttons expose focused APIs and share underlying behaviour. Size, icons
+            and width are component properties; enabled, disabled and loading are named states.</p>
+          <p>The shared implementation handles loading feedback and interaction styling centrally. Product developers
+            can express what an action is doing without rebuilding the button for each screen.</p>
+        </article>
+        <div class="ds-code">
+          <p>Component usage · Dart</p>
+          <pre><code>LDSButtonPrimary(
+  'Close',
+  trailingIcon: LDSIcons.close,
+  onPressed: () {},
+)
+
+LDSButtonPrimary(
+  'Disabled',
+  state: LDSButtonState.disabled,
+  size: LDSButtonSize.medium,
+),
+</code></pre><span>Illustrative usage of the actual component API.</span>
+        </div>
+      </div>
+
+      <nav class="ds-component-index" aria-label="Component gallery"><a href="#button-states">Buttons</a><a
+          href="#input-states">Input fields</a><a href="#search-states">Search</a><a href="#selection-states">Selection
+          controls</a><a href="#list-patterns">Lists</a><a href="#card-patterns">Cards</a></nav>
+      <article id="button-states" class="ds-component-showcase">
+        <div class="ds-gallery-heading">
+          <div>
+            <p class="eyebrow">Actions</p>
+            <h3>Buttons, across the interaction states.</h3>
+          </div>
+          <p>Primary, secondary, text and danger variants share a common implementation. The visual specification covers
+            enabled, hover, focus, pressed, disabled and loading states, with light and dark theme values.</p>
+        </div>
+        <div class="ds-state-pair">
+          <figure class="ds-component-figure"><a href="assets/livewell-buttons-light.jpg"
+              aria-label="Open full-size image: Button variants arranged in enabled, hovered, focused, pressed, disabled and loading columns in light mode"><img
+                src="assets/livewell-buttons-light.jpg"
+                alt="Button variants arranged in enabled, hovered, focused, pressed, disabled and loading columns in light mode"
+                loading="lazy" /></a>
+            <figcaption>Light theme <a href="assets/livewell-buttons-light.jpg">View full size</a></figcaption>
+          </figure>
+          <figure class="ds-component-figure"><a href="assets/livewell-buttons-dark.jpg"
+              aria-label="Open full-size image: Button variants arranged in enabled, hovered, focused, pressed, disabled and loading columns in dark mode"><img
+                src="assets/livewell-buttons-dark.jpg"
+                alt="Button variants arranged in enabled, hovered, focused, pressed, disabled and loading columns in dark mode"
+                loading="lazy" /></a>
+            <figcaption>Dark theme <a href="assets/livewell-buttons-dark.jpg">View full size</a></figcaption>
+          </figure>
+        </div>
+        <p class="ds-implementation-note"><strong>In Flutter:</strong> named button states control availability and
+          loading feedback; shared state properties resolve hover, focus, pressed and disabled styling. Padded Material
+          tap targets keep the interaction area separate from the visible shape.</p>
+      </article>
+      <article id="input-states" class="ds-component-showcase">
+        <div class="ds-gallery-heading">
+          <div>
+            <p class="eyebrow">Forms</p>
+            <h3>Input fields with feedback built in.</h3>
+          </div>
+          <p>Single-line and multiline fields share labels, helper text and validation feedback. The visual states show
+            resting, hover, focus, populated, error and disabled treatments across both themes.</p>
+        </div>
+        <div class="ds-state-pair">
+          <figure class="ds-component-figure"><a href="assets/livewell-inputs-light.jpg"
+              aria-label="Open full-size image: Single-line and multiline input fields showing resting, hover, focus, populated, error and disabled treatments in light mode"><img
+                src="assets/livewell-inputs-light.jpg"
+                alt="Single-line and multiline input fields showing resting, hover, focus, populated, error and disabled treatments in light mode"
+                loading="lazy" /></a>
+            <figcaption>Light theme <a href="assets/livewell-inputs-light.jpg">View full size</a></figcaption>
+          </figure>
+          <figure class="ds-component-figure"><a href="assets/livewell-inputs-dark.jpg"
+              aria-label="Open full-size image: Single-line and multiline input fields showing resting, hover, focus, populated, error and disabled treatments in dark mode"><img
+                src="assets/livewell-inputs-dark.jpg"
+                alt="Single-line and multiline input fields showing resting, hover, focus, populated, error and disabled treatments in dark mode"
+                loading="lazy" /></a>
+            <figcaption>Dark theme <a href="assets/livewell-inputs-dark.jpg">View full size</a></figcaption>
+          </figure>
+        </div>
+        <p class="ds-implementation-note"><strong>In Flutter:</strong> controllers, validators, keyboard types and focus
+          handling connect the visual component to real forms. Small inputs have a minimum height of 48 px. Validation
+          text accompanies the error border so feedback has a written explanation.</p>
+      </article>
+      <article id="search-states" class="ds-component-showcase">
+        <div class="ds-gallery-heading">
+          <div>
+            <p class="eyebrow">Finding &amp; choosing</p>
+            <h3>Search, from field to results.</h3>
+          </div>
+          <p>Search fields and expandable result menus use the same visual language as the form components. Open and
+            closed menus, focus styling, clear actions and disabled treatments are part of the specification.</p>
+        </div>
+        <div class="ds-state-pair">
+          <figure class="ds-component-figure"><a href="assets/livewell-search-light.jpg"
+              aria-label="Open full-size image: Search fields and open result menus showing resting, hover, focused, populated and disabled treatments in light mode"><img
+                src="assets/livewell-search-light.jpg"
+                alt="Search fields and open result menus showing resting, hover, focused, populated and disabled treatments in light mode"
+                loading="lazy" /></a>
+            <figcaption>Light theme <a href="assets/livewell-search-light.jpg">View full size</a></figcaption>
+          </figure>
+          <figure class="ds-component-figure"><a href="assets/livewell-search-dark.jpg"
+              aria-label="Open full-size image: Search fields and open result menus showing resting, hover, focused, populated and disabled treatments in dark mode"><img
+                src="assets/livewell-search-dark.jpg"
+                alt="Search fields and open result menus showing resting, hover, focused, populated and disabled treatments in dark mode"
+                loading="lazy" /></a>
+            <figcaption>Dark theme <a href="assets/livewell-search-dark.jpg">View full size</a></figcaption>
+          </figure>
+        </div>
+        <p class="ds-implementation-note"><strong>In Flutter:</strong> <code>LDSDropdownSearch</code> exposes labels,
+          helper text, a focus node and a selection callback. Its documented keyboard behaviour supports up and down
+          navigation through results while skipping disabled items.</p>
+      </article>
+      <article id="selection-states" class="ds-component-showcase">
+        <div class="ds-gallery-heading">
+          <div>
+            <p class="eyebrow">Selection controls</p>
+            <h3>Small controls, deliberate interactions.</h3>
+          </div>
+          <p>Checkboxes, radio buttons and switches cover selected and unselected values, focus and hover feedback,
+            disabled states and error treatments where applicable. Labelled variants place the control in the context of
+            an actual choice.</p>
+        </div>
+        <figure class="ds-component-figure"><a href="assets/livewell-selection-controls.jpg"
+            aria-label="Open full-size image: Checkboxes, radio buttons and switches with selected, unselected, hover, focus, error and disabled variants, including labelled examples"><img
+              src="assets/livewell-selection-controls.jpg"
+              alt="Checkboxes, radio buttons and switches with selected, unselected, hover, focus, error and disabled variants, including labelled examples"
+              loading="lazy" /></a>
+          <figcaption>Selection values and interaction states are specified together. <a
+              href="assets/livewell-selection-controls.jpg">View full size</a></figcaption>
+        </figure>
+        <p class="ds-implementation-note"><strong>In Flutter:</strong> checkbox and radio controls wrap a 24 px visual
+          element in 12 px padding on each side, giving a 48 × 48 px outer interaction area. Focus borders and
+          <code>Semantics</code> properties expose interaction and selection state.
+        </p>
+      </article>
+      <article id="list-patterns" class="ds-component-showcase">
+        <div class="ds-gallery-heading">
+          <div>
+            <p class="eyebrow">Reusable patterns</p>
+            <h3>Lists with a consistent structure.</h3>
+          </div>
+          <p>Leading icons, headlines, supporting text and trailing content form reusable rows. The examples include a
+            default row, a disabled treatment, status actions and richer supporting information.</p>
+        </div>
+        <figure class="ds-component-figure"><a href="assets/livewell-lists.jpg"
+            aria-label="Open full-size image: List item variants with leading icons, headline and supporting text, disabled styling, status actions and trailing metadata"><img
+              src="assets/livewell-lists.jpg"
+              alt="List item variants with leading icons, headline and supporting text, disabled styling, status actions and trailing metadata"
+              loading="lazy" /></a>
+          <figcaption>Shared row structure accommodates different kinds of product content. <a
+              href="assets/livewell-lists.jpg">View full size</a></figcaption>
+        </figure>
+      </article>
+      <article id="card-patterns" class="ds-component-showcase">
+        <div class="ds-gallery-heading">
+          <div>
+            <p class="eyebrow">Composition</p>
+            <h3>Cards built from the same foundations.</h3>
+          </div>
+          <p>Cards combine typography, icons, imagery, status and actions into larger product patterns. The library
+            includes image cards, status cards, progress and goal cards, and selectable content, all grounded in shared
+            spacing, radius and theme values.</p>
+        </div>
+        <figure class="ds-component-figure"><a href="assets/livewell-cards.jpg"
+            aria-label="Open full-size image: LiveWell card patterns with images, tags, status, progress information, selection and contextual actions"><img
+              src="assets/livewell-cards.jpg"
+              alt="LiveWell card patterns with images, tags, status, progress information, selection and contextual actions"
+              loading="lazy" /></a>
+          <figcaption>Card variants demonstrate how the foundations compose into richer interfaces. <a
+              href="assets/livewell-cards.jpg">View full size</a></figcaption>
+        </figure>
+      </article>
+      <section id="accessibility" class="ds-accessibility">
+        <p class="eyebrow">Accessibility in implementation</p>
+        <h3>Beyond the visual specification.</h3>
+        <p class="ds-accessibility-intro">I considered target size, focus, semantics and colour roles as part of
+          component development. These implementation details make those decisions visible in code.</p>
+        <div class="ds-detail-grid">
+          <article>
+            <h4>Room to interact</h4>
+            <p>Small inputs use a 48 px minimum height. Selection controls add padding around the visible shape, and
+              buttons use padded Material tap targets.</p>
+          </article>
+          <article>
+            <h4>Focus &amp; semantics</h4>
+            <p>Selection controls define focus borders and expose checked or toggled values through Flutter semantics.
+              Search menus support keyboard traversal, including disabled-item handling.</p>
+          </article>
+          <article>
+            <h4>Colour &amp; feedback</h4>
+            <p>Shared foreground, surface and semantic palettes define colours for each theme. Selected controls also
+              change their shape or mark, and form errors include text alongside colour feedback.</p>
+          </article>
+        </div>
+        <figure class="ds-component-figure"><a href="assets/livewell-semantic-message.png"
+            aria-label="Open full-size image: Semantic Message component in success, information, warning, error and insight variants, each with an icon, message and dismiss action"><img
+              src="assets/livewell-semantic-message.png"
+              alt="Semantic Message component in success, information, warning, error and insight variants, each with an icon, message and dismiss action"
+              loading="lazy" /></a>
+          <figcaption>The shared Semantic Message component is used throughout the app, combining colour, an icon and
+            text for success, information, warning, error and insight feedback. <a
+              href="assets/livewell-semantic-message.png">View full size</a></figcaption>
+        </figure>
+      </section>
+      <div class="ds-gallery-heading ds-verification-copy">
+        <div>
+          <p class="eyebrow">Documentation &amp; verification</p>
+          <h3>A shared reference for the team.</h3>
+        </div>
+        <p>API documentation and a reference app make variants and states discoverable. The library’s widget tests cover
+          rendering and interactions, including button callbacks.</p>
+      </div>
+      <figure class="ds-video"><video controls playsinline preload="none" poster="assets/livewell-components.png">
+          <source src="assets/ds-demo-2x.mp4" type="video/mp4" />
+        </video>
+        <figcaption>The component reference app: a place to explore the system beyond static specifications.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section id="outcome" class="ds-product section-shell">
+      <div class="ds-story">
+        <div>
+          <p class="eyebrow">In the product</p>
+          <h2>From reusable parts<br>to everyday experiences.</h2>
+        </div>
+        <div class="ds-prose">
+          <p>The system became a shared foundation for LiveWell’s product work. Common components and themes gave teams
+            a consistent starting point for features and helped move existing screens towards the same visual language.
+          </p>
+          <p>Owning the Flutter implementation while working on the app let me address the details that surface during
+            adoption: component boundaries, state handling and where a reusable pattern needs flexibility.</p>
+          <h3>What this work reinforced</h3>
+          <p>A useful Design System evolves through use. Clear APIs, examples and close collaboration with design matter
+            as much as the component collection itself.</p>
+        </div>
+      </div>
+      <figure><img src="assets/livewell-before-after.png"
+          alt="LiveWell product screens before and after adopting the Design System" loading="lazy" />
+        <figcaption>The system applied to the product: shared foundations across LiveWell screens.</figcaption>
+      </figure>
+    </section>
+    <section class="ds-end section-shell">
+      <p class="eyebrow">More of my work</p>
+      <h2>One product was the starting point.</h2>
+      <p>The next challenge was a shared foundation for a multi-app ecosystem at Zurich Global Ventures.</p><a
+        class="ds-text-link" href="index.html#zgv">Explore Zurich Global Ventures</a><a class="ds-text-link"
+        href="index.html#design-systems">Back to Design Systems</a>
+    </section>
+  </main>
+  <footer class="site-footer section-shell"><span>Ann-Sofi Lantz</span><span>Senior Flutter Engineer ·
+      Barcelona</span><a href="#top">Back to top</a></footer>
+  <script src="script.js"></script>
+</body>
+
+</html>

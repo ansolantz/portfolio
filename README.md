@@ -4,6 +4,8 @@ Personal portfolio for Ann-Sofi Lantz, Senior Flutter Engineer with a focus on D
 
 The site includes selected work from LiveWell by Zurich, Zurich Global Ventures, Koa Health and Natural Machines, as well as a dedicated section about Design System development.
 
+The LiveWell Design System case study is available at `livewell-design-system.html`, with design foundations, Flutter architecture, component API examples and product adoption.
+
 ## Built with
 
 - HTML
