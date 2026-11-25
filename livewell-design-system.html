@@ -33,15 +33,15 @@
       <dl class="ds-role-grid">
         <div>
           <dt>My responsibility</dt>
-          <dd>Flutter architecture &amp; implementation<br>Full ownership from the start</dd>
+          <dd>Component design<br>Flutter architecture &amp; implementation<br>Full Flutter ownership from the start</dd>
         </div>
         <div>
           <dt>Design collaboration</dt>
-          <dd>Foundations &amp; component definitions<br>Built together with a designer</dd>
+          <dd>Foundations &amp; component design in Figma<br>Design documentation, tokens &amp; variables<br>Accessibility testing</dd>
         </div>
         <div>
           <dt>Deliverables</dt>
-          <dd>Component library, themes &amp; tokens<br>API documentation &amp; reference app</dd>
+          <dd>Figma design library<br>Flutter component library with themes &amp; tokens<br>API documentation &amp; reference app</dd>
         </div>
       </dl>
     </section>
@@ -86,7 +86,7 @@
           <figure><a href="assets/livewell-color-palettes.jpg" aria-label="Open the LiveWell colour palettes image"><img
                 src="assets/livewell-color-palettes.jpg"
                 alt="LiveWell light and dark colour palettes with semantic success, warning, error, info and insight tokens"
-                loading="lazy" /></a>
+                width="1600" height="1527" loading="lazy" /></a>
             <figcaption>Shared palettes and semantic roles in Figma. Select the image to inspect it.</figcaption>
           </figure>
         </article>
@@ -97,7 +97,7 @@
           <figure><a href="assets/livewell-type-scale.jpg" aria-label="Open the LiveWell typography scale image"><img
                 src="assets/livewell-type-scale.jpg"
                 alt="LiveWell typography scale showing display, headline, title, body and label styles in regular and medium weights"
-                loading="lazy" /></a>
+                width="1600" height="1162" loading="lazy" /></a>
             <figcaption>Type styles with explicit sizes, weights and line heights.</figcaption>
           </figure>
           <div class="ds-token-names"><code>LDSSpacing</code><code>LDSSize</code><code>LDSRadius</code></div>
@@ -118,6 +118,8 @@
         <div class="ds-measurement-grid">
           <div class="ds-scale-panel">
             <h4>Spacing scale · pixels</h4>
+            <p>In Figma, named <code>LDSSpacing</code> variables are applied to Auto Layout padding and gaps. For
+              example, <code>xs</code> sets an 8 px gap. Flutter uses the corresponding <code>LDSSpacing.xs</code> token.</p>
             <ul class="ds-spacing-scale">
               <li><code>xxxs</code><span class="ds-spacing-bar" style="--space-value:2px"
                   aria-hidden="true"></span><span>2 px</span></li>
@@ -140,12 +142,12 @@
               <li><code>xxxl</code><span class="ds-spacing-bar" style="--space-value:64px"
                   aria-hidden="true"></span><span>64 px</span></li>
             </ul>
-            <p>Values from the Flutter <code>LDSSpacing</code> scale.</p>
           </div>
           <div class="ds-scale-panel">
             <h4>Sizes &amp; corner radius</h4>
-            <p><code>LDSSize</code> provides named dimensions for components, including 16, 20, 24, 32, 40 and 48 px.
-            </p>
+            <p>In Figma, size variables set component widths and heights, and radius variables set corner rounding.
+              In Flutter, <code>LDSSize.s24</code> sets a 24 px dimension, and <code>LDSRadius.m</code> applies the
+              same 16 px corner radius as <code>LDSRadius/m</code> in Figma.</p>
             <div class="ds-radius-examples">
               <div style="--sample-radius:4px"><span>4 px</span></div>
               <div style="--sample-radius:8px"><span>8 px</span></div>
@@ -159,30 +161,45 @@
               Flutter layout values.</p>
           </div>
         </div>
+        <div class="ds-measurement-grid ds-figma-variables">
+          <figure class="ds-component-figure">
+            <a href="assets/livewell-figma-spacing-variables.png">
+              <img src="assets/livewell-figma-spacing-variables.png"
+                alt="Figma Auto Layout variable picker with the 8 px LDSSpacing xs value highlighted"
+                width="578" height="844" loading="lazy" />
+            </a>
+            <figcaption>Spacing variables in Figma’s Auto Layout picker.</figcaption>
+          </figure>
+          <figure class="ds-component-figure">
+            <a href="assets/livewell-figma-radius-variables.png">
+              <img src="assets/livewell-figma-radius-variables.png"
+                alt="Figma corner radius variable picker with the 8 px LDSRadius s value highlighted"
+                width="582" height="766" loading="lazy" />
+            </a>
+            <figcaption>Corner radius variables in Figma’s property panel.</figcaption>
+          </figure>
+        </div>
         <div class="ds-layout-gallery">
           <figure class="ds-component-figure"><a href="assets/livewell-layout-container.png"
               aria-label="Open full-size image: Main container layout with 24 px padding and section spacing, and a 32 px top corner radius"><img
                 src="assets/livewell-layout-container.png"
                 alt="Main container layout with 24 px padding and section spacing, and a 32 px top corner radius"
-                loading="lazy" /></a>
-            <figcaption>Container structure: 24 px padding and section gaps. <a
-                href="assets/livewell-layout-container.png">View full size</a></figcaption>
+                width="980" height="946" loading="lazy" /></a>
+            <figcaption>Container structure: 24 px padding and section gaps.</figcaption>
           </figure>
           <figure class="ds-component-figure"><a href="assets/livewell-layout-sections.png"
               aria-label="Open full-size image: Content layout showing 16 px card radius and content gaps, 24 px section gaps and 8 px between buttons"><img
                 src="assets/livewell-layout-sections.png"
                 alt="Content layout showing 16 px card radius and content gaps, 24 px section gaps and 8 px between buttons"
-                loading="lazy" /></a>
-            <figcaption>Within sections: 16 px content gaps and 8 px between buttons. <a
-                href="assets/livewell-layout-sections.png">View full size</a></figcaption>
+                width="990" height="946" loading="lazy" /></a>
+            <figcaption>Within sections: 16 px content gaps and 8 px between buttons.</figcaption>
           </figure>
           <figure class="ds-component-figure"><a href="assets/livewell-layout-safe-area.png"
               aria-label="Open full-size image: Safe content area guidance with 16 px clearance below the status bar and 40 px above the bottom system area"><img
                 src="assets/livewell-layout-safe-area.png"
                 alt="Safe content area guidance with 16 px clearance below the status bar and 40 px above the bottom system area"
-                loading="lazy" /></a>
-            <figcaption>Safe areas: documented clearances of 16 px and 40 px. <a
-                href="assets/livewell-layout-safe-area.png">View full size</a></figcaption>
+                width="892" height="946" loading="lazy" /></a>
+            <figcaption>Safe areas: documented clearances of 16 px and 40 px.</figcaption>
           </figure>
         </div>
         <p class="ds-implementation-note"><strong>In Flutter:</strong> <code>LDSSpacing</code>, <code>LDSSize</code> and
@@ -204,15 +221,14 @@
               aria-label="Open full-size image: LiveWell icon library in the light theme, covering health, navigation, activity and interface actions"><img
                 src="assets/livewell-icons-light.png"
                 alt="LiveWell icon library in the light theme, covering health, navigation, activity and interface actions"
-                loading="lazy" /></a>
-            <figcaption>Light theme · shared foreground colour. <a href="assets/livewell-icons-light.png">View full
-                size</a></figcaption>
+                width="720" height="456" loading="lazy" /></a>
+            <figcaption>Light theme · shared foreground colour.</figcaption>
           </figure>
           <figure class="ds-component-figure"><a href="assets/livewell-icons-dark.png"
               aria-label="Open full-size image: LiveWell icon library in the dark theme"><img
-                src="assets/livewell-icons-dark.png" alt="LiveWell icon library in the dark theme" loading="lazy" /></a>
-            <figcaption>Dark theme · the same icon vocabulary. <a href="assets/livewell-icons-dark.png">View full
-                size</a></figcaption>
+                src="assets/livewell-icons-dark.png" alt="LiveWell icon library in the dark theme" width="720"
+                height="456" loading="lazy" /></a>
+            <figcaption>Dark theme · the same icon vocabulary.</figcaption>
           </figure>
         </div>
         <div class="ds-icon-guidance">
@@ -220,15 +236,17 @@
               aria-label="Open full-size image: Icon construction diagrams showing a 20 by 20 px live area with 2 px padding inside a 24 by 24 px frame"><img
                 src="assets/livewell-icon-geometry.png"
                 alt="Icon construction diagrams showing a 20 by 20 px live area with 2 px padding inside a 24 by 24 px frame"
-                loading="lazy" /></a>
-            <figcaption>Icon construction: live area and padding are specified separately. <a
-                href="assets/livewell-icon-geometry.png">View full size</a></figcaption>
+                width="720" height="750" loading="lazy" /></a>
+            <figcaption>Icon construction: live area and padding are specified separately.</figcaption>
           </figure>
           <div class="ds-prose">
             <h4>Geometry, sizing &amp; implementation</h4>
             <p>A 24 × 24 px icon frame contains a 20 × 20 px live area with 2 px padding around it. This gives different
               symbols a common alignment reference.</p>
-            <p>The size scale defines five options: 16 × 16 px, 20 × 20 px, 24 × 24 px, 32 × 32 px and 40 × 40 px.</p>
+            <p>In Figma, named size variables set the width and height of the icon. The documented scale uses
+              <code>xs</code> (16 px), <code>s</code> (20 px), <code>m</code> (24 px), <code>l</code> (32 px) and
+              <code>xl</code> (40 px). Flutter uses the same size names. For example, the 24 × 24 px icon uses
+              <code>size: LDSIconSize.m</code>.</p>
             <p>The design guidance specifies rounded Material Symbols with weight 300 and no fill. Custom icon strokes
               use 1.5 px and the shared foreground colour.</p>
             <p>In Flutter, <code>LDSIcon</code> provides the shared icon component, while <code>LDSCustomIcons</code>
@@ -248,9 +266,9 @@
         <figure class="ds-component-figure"><a href="assets/livewell-elevation-shadows.png"
             aria-label="Open full-size image: Three surface treatments: no shadow, top shadow and bottom shadow"><img
               src="assets/livewell-elevation-shadows.png"
-              alt="Three surface treatments: no shadow, top shadow and bottom shadow" loading="lazy" /></a>
-          <figcaption>Neutral shadow treatments for shared surfaces. <a
-              href="assets/livewell-elevation-shadows.png">View full size</a></figcaption>
+              alt="Three surface treatments: no shadow, top shadow and bottom shadow" width="2968" height="514"
+              loading="lazy" /></a>
+          <figcaption>Neutral shadow treatments for shared surfaces.</figcaption>
         </figure>
         <p class="ds-implementation-note"><strong>In Flutter:</strong> <code>DesignSystemShadowsTheme</code> defines
           reusable <code>BoxShadow</code> lists. The top treatment combines 10 px and 2 px blur layers; the bottom
@@ -284,10 +302,10 @@
             <pre><code>final colors =
     DesignSystemTheme.of(context).colors;
 
-colors.surface
-colors.onSurface
-colors.primary.shade20
-colors.semantic.error</code></pre><span>Selected API usage from the library documentation.</span>
+final surface = colors.surface;
+final foreground = colors.onSurface;
+final accent = colors.primary.shade20;
+final error = colors.semantic.error;</code></pre><span>Selected API usage from the library documentation.</span>
           </div>
         </div>
       </div>
@@ -300,62 +318,52 @@ colors.semantic.error</code></pre><span>Selected API usage from the library docu
         <p>A component needs to describe how it behaves as well as how it looks. Explicit variants and states make those
           decisions reusable across product screens.</p>
       </div>
-      <div class="ds-engineering-grid">
-        <article>
-          <h3>Buttons with explicit states</h3>
-          <p>Primary, secondary, text and danger buttons expose focused APIs and share underlying behaviour. Size, icons
-            and width are component properties; enabled, disabled and loading are named states.</p>
-          <p>The shared implementation handles loading feedback and interaction styling centrally. Product developers
-            can express what an action is doing without rebuilding the button for each screen.</p>
-        </article>
-        <div class="ds-code">
-          <p>Component usage · Dart</p>
-          <pre><code>LDSButtonPrimary(
-  'Close',
-  trailingIcon: LDSIcons.close,
-  onPressed: () {},
-)
-
-LDSButtonPrimary(
-  'Disabled',
-  state: LDSButtonState.disabled,
-  size: LDSButtonSize.medium,
-),
-</code></pre><span>Illustrative usage of the actual component API.</span>
-        </div>
-      </div>
-
       <nav class="ds-component-index" aria-label="Component gallery"><a href="#button-states">Buttons</a><a
           href="#input-states">Input fields</a><a href="#search-states">Search</a><a href="#selection-states">Selection
           controls</a><a href="#list-patterns">Lists</a><a href="#card-patterns">Cards</a></nav>
       <article id="button-states" class="ds-component-showcase">
-        <div class="ds-gallery-heading">
-          <div>
+        <div class="ds-engineering-grid ds-button-example">
+          <div class="ds-prose">
             <p class="eyebrow">Actions</p>
             <h3>Buttons, across the interaction states.</h3>
+            <p>Primary, secondary, text and danger variants share a common implementation. The visual specification covers
+              enabled, hover, focus, pressed, disabled and loading states, with light and dark theme values.</p>
+            <h4>How product code uses the button</h4>
+            <p>Callers provide the label, optional icons and what should happen on press. The shared component
+              handles interaction styling and loading feedback. Padded Material tap targets keep the interaction area
+              separate from the visible shape.</p>
           </div>
-          <p>Primary, secondary, text and danger variants share a common implementation. The visual specification covers
-            enabled, hover, focus, pressed, disabled and loading states, with light and dark theme values.</p>
+          <div class="ds-code">
+            <p>Component usage · Dart</p>
+            <pre><code>final closeButton = LDSButtonPrimary(
+  'Close',
+  trailingIcon: LDSCustomIcons.close,
+  onPressed: closeDialog,
+);
+
+final disabledButton = LDSButtonPrimary(
+  'Disabled',
+  state: LDSButtonState.disabled,
+  size: LDSButtonSize.medium,
+);</code></pre>
+          </div>
         </div>
         <div class="ds-state-pair">
           <figure class="ds-component-figure"><a href="assets/livewell-buttons-light.jpg"
               aria-label="Open full-size image: Button variants arranged in enabled, hovered, focused, pressed, disabled and loading columns in light mode"><img
                 src="assets/livewell-buttons-light.jpg"
                 alt="Button variants arranged in enabled, hovered, focused, pressed, disabled and loading columns in light mode"
-                loading="lazy" /></a>
-            <figcaption>Light theme <a href="assets/livewell-buttons-light.jpg">View full size</a></figcaption>
+                width="2000" height="926" loading="lazy" /></a>
+            <figcaption>Light theme</figcaption>
           </figure>
           <figure class="ds-component-figure"><a href="assets/livewell-buttons-dark.jpg"
               aria-label="Open full-size image: Button variants arranged in enabled, hovered, focused, pressed, disabled and loading columns in dark mode"><img
                 src="assets/livewell-buttons-dark.jpg"
                 alt="Button variants arranged in enabled, hovered, focused, pressed, disabled and loading columns in dark mode"
-                loading="lazy" /></a>
-            <figcaption>Dark theme <a href="assets/livewell-buttons-dark.jpg">View full size</a></figcaption>
+                width="2000" height="926" loading="lazy" /></a>
+            <figcaption>Dark theme</figcaption>
           </figure>
         </div>
-        <p class="ds-implementation-note"><strong>In Flutter:</strong> named button states control availability and
-          loading feedback; shared state properties resolve hover, focus, pressed and disabled styling. Padded Material
-          tap targets keep the interaction area separate from the visible shape.</p>
       </article>
       <article id="input-states" class="ds-component-showcase">
         <div class="ds-gallery-heading">
@@ -371,15 +379,15 @@ LDSButtonPrimary(
               aria-label="Open full-size image: Single-line and multiline input fields showing resting, hover, focus, populated, error and disabled treatments in light mode"><img
                 src="assets/livewell-inputs-light.jpg"
                 alt="Single-line and multiline input fields showing resting, hover, focus, populated, error and disabled treatments in light mode"
-                loading="lazy" /></a>
-            <figcaption>Light theme <a href="assets/livewell-inputs-light.jpg">View full size</a></figcaption>
+                width="2000" height="433" loading="lazy" /></a>
+            <figcaption>Light theme</figcaption>
           </figure>
           <figure class="ds-component-figure"><a href="assets/livewell-inputs-dark.jpg"
               aria-label="Open full-size image: Single-line and multiline input fields showing resting, hover, focus, populated, error and disabled treatments in dark mode"><img
                 src="assets/livewell-inputs-dark.jpg"
                 alt="Single-line and multiline input fields showing resting, hover, focus, populated, error and disabled treatments in dark mode"
-                loading="lazy" /></a>
-            <figcaption>Dark theme <a href="assets/livewell-inputs-dark.jpg">View full size</a></figcaption>
+                width="2000" height="430" loading="lazy" /></a>
+            <figcaption>Dark theme</figcaption>
           </figure>
         </div>
         <p class="ds-implementation-note"><strong>In Flutter:</strong> controllers, validators, keyboard types and focus
@@ -400,15 +408,15 @@ LDSButtonPrimary(
               aria-label="Open full-size image: Search fields and open result menus showing resting, hover, focused, populated and disabled treatments in light mode"><img
                 src="assets/livewell-search-light.jpg"
                 alt="Search fields and open result menus showing resting, hover, focused, populated and disabled treatments in light mode"
-                loading="lazy" /></a>
-            <figcaption>Light theme <a href="assets/livewell-search-light.jpg">View full size</a></figcaption>
+                width="2000" height="515" loading="lazy" /></a>
+            <figcaption>Light theme</figcaption>
           </figure>
           <figure class="ds-component-figure"><a href="assets/livewell-search-dark.jpg"
               aria-label="Open full-size image: Search fields and open result menus showing resting, hover, focused, populated and disabled treatments in dark mode"><img
                 src="assets/livewell-search-dark.jpg"
                 alt="Search fields and open result menus showing resting, hover, focused, populated and disabled treatments in dark mode"
-                loading="lazy" /></a>
-            <figcaption>Dark theme <a href="assets/livewell-search-dark.jpg">View full size</a></figcaption>
+                width="2000" height="515" loading="lazy" /></a>
+            <figcaption>Dark theme</figcaption>
           </figure>
         </div>
         <p class="ds-implementation-note"><strong>In Flutter:</strong> <code>LDSDropdownSearch</code> exposes labels,
@@ -429,9 +437,8 @@ LDSButtonPrimary(
             aria-label="Open full-size image: Checkboxes, radio buttons and switches with selected, unselected, hover, focus, error and disabled variants, including labelled examples"><img
               src="assets/livewell-selection-controls.jpg"
               alt="Checkboxes, radio buttons and switches with selected, unselected, hover, focus, error and disabled variants, including labelled examples"
-              loading="lazy" /></a>
-          <figcaption>Selection values and interaction states are specified together. <a
-              href="assets/livewell-selection-controls.jpg">View full size</a></figcaption>
+              width="2000" height="860" loading="lazy" /></a>
+          <figcaption>Selection values and interaction states are specified together.</figcaption>
         </figure>
         <p class="ds-implementation-note"><strong>In Flutter:</strong> checkbox and radio controls wrap a 24 px visual
           element in 12 px padding on each side, giving a 48 × 48 px outer interaction area. Focus borders and
@@ -451,9 +458,8 @@ LDSButtonPrimary(
             aria-label="Open full-size image: List item variants with leading icons, headline and supporting text, disabled styling, status actions and trailing metadata"><img
               src="assets/livewell-lists.jpg"
               alt="List item variants with leading icons, headline and supporting text, disabled styling, status actions and trailing metadata"
-              loading="lazy" /></a>
-          <figcaption>Shared row structure accommodates different kinds of product content. <a
-              href="assets/livewell-lists.jpg">View full size</a></figcaption>
+              width="2000" height="225" loading="lazy" /></a>
+          <figcaption>Shared row structure accommodates different kinds of product content.</figcaption>
         </figure>
       </article>
       <article id="card-patterns" class="ds-component-showcase">
@@ -470,9 +476,8 @@ LDSButtonPrimary(
             aria-label="Open full-size image: LiveWell card patterns with images, tags, status, progress information, selection and contextual actions"><img
               src="assets/livewell-cards.jpg"
               alt="LiveWell card patterns with images, tags, status, progress information, selection and contextual actions"
-              loading="lazy" /></a>
-          <figcaption>Card variants demonstrate how the foundations compose into richer interfaces. <a
-              href="assets/livewell-cards.jpg">View full size</a></figcaption>
+              width="2000" height="792" loading="lazy" /></a>
+          <figcaption>Card variants demonstrate how the foundations compose into richer interfaces.</figcaption>
         </figure>
       </article>
       <section id="accessibility" class="ds-accessibility">
@@ -501,10 +506,9 @@ LDSButtonPrimary(
             aria-label="Open full-size image: Semantic Message component in success, information, warning, error and insight variants, each with an icon, message and dismiss action"><img
               src="assets/livewell-semantic-message.png"
               alt="Semantic Message component in success, information, warning, error and insight variants, each with an icon, message and dismiss action"
-              loading="lazy" /></a>
+              width="1813" height="124" loading="lazy" /></a>
           <figcaption>The shared Semantic Message component is used throughout the app, combining colour, an icon and
-            text for success, information, warning, error and insight feedback. <a
-              href="assets/livewell-semantic-message.png">View full size</a></figcaption>
+            text for success, information, warning, error and insight feedback.</figcaption>
         </figure>
       </section>
       <div class="ds-gallery-heading ds-verification-copy">
@@ -541,7 +545,8 @@ LDSButtonPrimary(
         </div>
       </div>
       <figure><img src="assets/livewell-before-after.png"
-          alt="LiveWell product screens before and after adopting the Design System" loading="lazy" />
+          alt="LiveWell product screens before and after adopting the Design System" width="1693" height="929"
+          loading="lazy" />
         <figcaption>The system applied to the product: shared foundations across LiveWell screens.</figcaption>
       </figure>
     </section>

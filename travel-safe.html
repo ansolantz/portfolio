@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <meta name="description"
+    content="Travel Safe is a mobile prototype for destination guidance and assistance, built with Flutter and the ZGV Design System at a Zurich Global Ventures hackathon." />
+  <title>Travel Safe | Zurich Global Ventures Hackathon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="ds-page travel-page">
+  <a class="ds-skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Portfolio home">AL.</a>
+    <nav aria-label="Primary navigation"><a href="index.html#work">Work</a><a href="index.html#design-systems">Design
+        Systems</a><a href="index.html#about">About</a><a href="index.html#contact">Get in touch</a></nav>
+  </header>
+  <main id="main">
+    <section class="ds-case-hero section-shell" id="top">
+      <a class="ds-text-link" href="index.html#zgv">Back to Zurich Global Ventures</a>
+      <p class="eyebrow">Zurich Global Ventures · 2025 Hackathon</p>
+      <h1>Travel <span>Safe</span></h1>
+      <p class="ds-case-lede">Travel Safe is a mobile prototype for finding local safety information and getting help while travelling. The destination map brings local events, risk areas and practical guidance into one view.</p>
+      <dl class="ds-role-grid">
+        <div><dt>My role</dt><dd>Design System Engineer / Flutter Developer<br>App foundation, navigation &amp; theming</dd></div>
+        <div><dt>Project</dt><dd>Zurich Global Ventures<br>Mobile hackathon prototype · 2025</dd></div>
+        <div><dt>Technology</dt><dd>Flutter, Dart &amp; Riverpod<br>ZGV Design System</dd></div>
+      </dl>
+    </section>
+
+    <figure class="ds-cover ds-component-figure section-shell">
+          <a href="assets/travel-safe-cover.jpg">
+            <img src="assets/travel-safe-cover.jpg" alt="Travel Safe design mockups showing local risk guidance, assistance options and a photo scan result" width="1600" height="953" loading="lazy" />
+          </a>
+          <figcaption>Product design mockups showing the map, assistance sheet and photo scan.</figcaption>
+        </figure>
+    <nav class="ds-section-nav section-shell" aria-label="Travel Safe case study sections">
+      <a href="#problem">The brief</a>
+      <a href="#contribution">Design System in practice</a>
+      <a href="#prototype">Flutter prototype</a>
+      <a href="#product-direction">Product direction</a>
+    </nav>
+
+    <section id="problem" class="ds-story section-shell">
+      <div><p class="eyebrow">The brief</p><h2>Put local guidance and help within reach.</h2></div>
+      <div class="ds-prose">
+        <p>When travellers arrive somewhere unfamiliar, advice about local risks, emergency contacts and trip details can be spread across separate services. The hackathon prototype explores how these tools could work together on mobile.</p>
+        <p>The destination map is the starting point. A panel groups local events, risk areas and practical information, while an assistance entry point lets travellers choose how to get help.</p>
+      </div>
+    </section>
+
+    <section id="contribution" class="ds-engineering">
+      <div class="section-shell">
+        <div class="ds-section-heading">
+          <p class="eyebrow">Design System in practice</p>
+          <h2>Building Travel Safe with the ZGV Design System</h2>
+          <p>I integrated the ZGV Design System’s Flutter package during project setup, giving the app a foundation of shared components and design tokens. I also set up automated code checks and built the initial map panel and bottom navigation.</p>
+        </div>
+        <div class="ds-architecture ds-travel-architecture">
+          <div><strong>One theme for the whole app</strong><span>DesignSystemApp provides the shared theme. The same setting controls light and dark mode in both the Design System and Flutter’s Material theme. I added a dark vector tile style so the map follows that setting too.</span></div>
+          <div><strong>Components across flows</strong><span>The prototype uses shared components across its main flows. This kept the interface and interactions consistent and made it easier to focus on features specific to Travel Safe.</span></div>
+          <div><strong>Tokens in custom UI</strong><span>Custom screens use the library’s colour roles, spacing, typography and corner radii, giving the map search and chat the same visual rules as the shared components.</span></div>
+        </div>
+        <p class="travel-navigation-note">I paired the shared bottom navigation with Riverpod and an IndexedStack, so each tab could keep its own navigation history as users switched between flows.</p>
+      </div>
+    </section>
+
+    <section id="prototype" class="ds-components section-shell">
+      <div class="ds-section-heading">
+        <p class="eyebrow">Flutter prototype</p>
+        <h2>From selecting a city to finding context.</h2>
+        <p>The prototype connects onboarding, local guidance, photo scanning and guided assistance.</p>
+      </div>
+      <article class="ds-component-showcase travel-map">
+        <div class="ds-prose">
+          <h3>Explore a destination</h3>
+          <p>City search moves the Flutter map to the selected destination and loads bundled JSON for the local events, risk areas and practical guidance shown in the map panel. The app can also centre on the device location when permission is granted.</p>
+          <p>The prototype used sample city data. The broader concept explored live alerts and location-aware safety information.</p>
+        </div>
+        <figure class="ds-component-figure">
+          <a href="assets/travel-safe-dashboard.jpg">
+            <img src="assets/travel-safe-dashboard.jpg" alt="Three dashboard designs showing a Barcelona map with events, risk areas and practical guidance" width="1463" height="1600" loading="lazy" />
+          </a>
+          <figcaption>Dashboard design reference for the three map panels.</figcaption>
+        </figure>
+      </article>
+      <article class="ds-component-showcase">
+        <div class="ds-gallery-heading">
+          <div><h3>Identify a place from a photo</h3></div>
+          <p>The scan flow accepts a camera or gallery image. The Flutter client requests a signed upload URL via GraphQL, uploads the image and asks the backend to identify the location. The view model tracks upload, result and error states, and a result can be opened on the map.</p>
+        </div>
+        <figure class="ds-component-figure">
+          <a href="assets/travel-safe-scan.jpg">
+            <img src="assets/travel-safe-scan.jpg" alt="Photo scan designs showing entry, camera permission, analysis, place result and map" width="1600" height="710" loading="lazy" />
+          </a>
+          <figcaption>Photo scan design flow from image selection to map result.</figcaption>
+        </figure>
+      </article>
+      <article class="ds-component-showcase">
+        <div class="ds-gallery-heading">
+          <div><h3>Find a route to assistance</h3></div>
+          <p>A support sheet gives users a choice of how to get help. The prototype chat follows a predefined conversation tree with quick replies. The product concept explored AI-assisted help and a connection to emergency services.</p>
+        </div>
+        <figure class="ds-component-figure">
+          <a href="assets/travel-safe-chat.jpg">
+            <img src="assets/travel-safe-chat.jpg" alt="Design screens showing the map, assistance choices and guided support conversation" width="1600" height="855" loading="lazy" />
+          </a>
+          <figcaption>Assistance design reference showing the entry point and guided chat.</figcaption>
+        </figure>
+      </article>
+      <article class="ds-component-showcase">
+        <div class="ds-gallery-heading">
+          <div><h3>Get started and grant access</h3></div>
+          <p>The app includes an intro carousel and uses Auth0 for email, Apple and Google sign-in. The navigation shell checks sign-in and location permission state before showing the map experience.</p>
+        </div>
+        <figure class="ds-component-figure">
+          <a href="assets/travel-safe-onboarding.jpg">
+            <img src="assets/travel-safe-onboarding.jpg" alt="Travel Safe splash, introduction and sign-in design screens" width="1600" height="701" loading="lazy" />
+          </a>
+          <figcaption>Onboarding design reference from the introduction to sign-in.</figcaption>
+        </figure>
+      </article>
+    </section>
+
+    <section id="product-direction" class="ds-product section-shell">
+      <div class="ds-story">
+        <div><p class="eyebrow">Product direction</p><h2>Carry safety context into each trip.</h2></div>
+        <div class="ds-prose">
+          <p>The design explored bringing itineraries, destination reports, alerts and coverage into the same experience. The hackathon build demonstrated the map, assistance and photo scan flows. The trip screen remained a placeholder in the app.</p>
+        </div>
+      </div>
+      <figure class="ds-component-figure travel-concept">
+          <a href="assets/travel-safe-trips.jpg">
+            <img src="assets/travel-safe-trips.jpg" alt="Concept screens for upcoming, ongoing and past trips and a new-trip form" width="1600" height="1076" loading="lazy" />
+          </a>
+          <figcaption>Trip management concept. The designs show a trip list and a form for adding a trip.</figcaption>
+        </figure>
+    </section>
+    <section class="ds-end section-shell">
+      <p class="eyebrow">More of my work</p>
+      <h2>Explore the shared foundations.</h2>
+      <a class="ds-text-link" href="index.html#zgv">Back to Zurich Global Ventures</a>
+      <a class="ds-text-link" href="livewell-design-system.html">Explore the LiveWell Design System</a>
+    </section>
+  </main>
+  <footer class="site-footer section-shell"><span>Travel Safe</span><span>Zurich Global Ventures · Hackathon 2025</span><a href="#top">Back to top</a></footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
