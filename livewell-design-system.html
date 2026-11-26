@@ -33,15 +33,18 @@
       <dl class="ds-role-grid">
         <div>
           <dt>My responsibility</dt>
-          <dd>Component design<br>Flutter architecture &amp; implementation<br>Full Flutter ownership from the start</dd>
+          <dd>Component design<br>Flutter architecture &amp; implementation<br>Full Flutter ownership from the start
+          </dd>
         </div>
         <div>
           <dt>Design collaboration</dt>
-          <dd>Foundations &amp; component design in Figma<br>Design documentation, tokens &amp; variables<br>Accessibility testing</dd>
+          <dd>Foundations &amp; component design in Figma<br>Design documentation, tokens &amp;
+            variables<br>Accessibility testing</dd>
         </div>
         <div>
           <dt>Deliverables</dt>
-          <dd>Figma design library<br>Flutter component library with themes &amp; tokens<br>API documentation &amp; reference app</dd>
+          <dd>Figma design library<br>Flutter component library with themes &amp; tokens<br>API documentation &amp;
+            reference app</dd>
         </div>
       </dl>
     </section>
@@ -119,7 +122,8 @@
           <div class="ds-scale-panel">
             <h4>Spacing scale · pixels</h4>
             <p>In Figma, named <code>LDSSpacing</code> variables are applied to Auto Layout padding and gaps. For
-              example, <code>xs</code> sets an 8 px gap. Flutter uses the corresponding <code>LDSSpacing.xs</code> token.</p>
+              example, <code>xs</code> sets an 8 px gap. Flutter uses the corresponding <code>LDSSpacing.xs</code>
+              token.</p>
             <ul class="ds-spacing-scale">
               <li><code>xxxs</code><span class="ds-spacing-bar" style="--space-value:2px"
                   aria-hidden="true"></span><span>2 px</span></li>
@@ -165,16 +169,16 @@
           <figure class="ds-component-figure">
             <a href="assets/livewell-figma-spacing-variables.png">
               <img src="assets/livewell-figma-spacing-variables.png"
-                alt="Figma Auto Layout variable picker with the 8 px LDSSpacing xs value highlighted"
-                width="578" height="844" loading="lazy" />
+                alt="Figma Auto Layout variable picker with the 8 px LDSSpacing xs value highlighted" width="578"
+                height="844" loading="lazy" />
             </a>
             <figcaption>Spacing variables in Figma’s Auto Layout picker.</figcaption>
           </figure>
           <figure class="ds-component-figure">
             <a href="assets/livewell-figma-radius-variables.png">
               <img src="assets/livewell-figma-radius-variables.png"
-                alt="Figma corner radius variable picker with the 8 px LDSRadius s value highlighted"
-                width="582" height="766" loading="lazy" />
+                alt="Figma corner radius variable picker with the 8 px LDSRadius s value highlighted" width="582"
+                height="766" loading="lazy" />
             </a>
             <figcaption>Corner radius variables in Figma’s property panel.</figcaption>
           </figure>
@@ -246,7 +250,8 @@
             <p>In Figma, named size variables set the width and height of the icon. The documented scale uses
               <code>xs</code> (16 px), <code>s</code> (20 px), <code>m</code> (24 px), <code>l</code> (32 px) and
               <code>xl</code> (40 px). Flutter uses the same size names. For example, the 24 × 24 px icon uses
-              <code>size: LDSIconSize.m</code>.</p>
+              <code>size: LDSIconSize.m</code>.
+            </p>
             <p>The design guidance specifies rounded Material Symbols with weight 300 and no fill. Custom icon strokes
               use 1.5 px and the shared foreground colour.</p>
             <p>In Flutter, <code>LDSIcon</code> provides the shared icon component, while <code>LDSCustomIcons</code>
@@ -326,7 +331,8 @@ final error = colors.semantic.error;</code></pre><span>Selected API usage from t
           <div class="ds-prose">
             <p class="eyebrow">Actions</p>
             <h3>Buttons, across the interaction states.</h3>
-            <p>Primary, secondary, text and danger variants share a common implementation. The visual specification covers
+            <p>Primary, secondary, text and danger variants share a common implementation. The visual specification
+              covers
               enabled, hover, focus, pressed, disabled and loading states, with light and dark theme values.</p>
             <h4>How product code uses the button</h4>
             <p>Callers provide the label, optional icons and what should happen on press. The shared component
@@ -556,6 +562,7 @@ final disabledButton = LDSButtonPrimary(
       <p>The next challenge was a shared foundation for a multi-app ecosystem at Zurich Global Ventures.</p><a
         class="ds-text-link" href="index.html#zgv">Explore Zurich Global Ventures</a><a class="ds-text-link"
         href="index.html#design-systems">Back to Design Systems</a>
+      <a class="ds-text-link" href="livewell-product.html">Explore LiveWell product development</a>
     </section>
   </main>
   <footer class="site-footer section-shell"><span>Ann-Sofi Lantz</span><span>Senior Flutter Engineer ·

@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+    content="LiveWell product development case study covering Flutter tracker improvements, animations, calendar and chart views, Rewards and Social Sharing." />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <title>LiveWell Product Development | Ann-Sofi Lantz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="ds-page lw-product-page">
+  <a class="ds-skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Portfolio home">AL.</a>
+    <nav aria-label="Primary navigation">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#design-systems">Design Systems</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Get in touch</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="ds-case-hero section-shell" id="top">
+      <a class="ds-text-link" href="index.html#livewell">Back to LiveWell</a>
+      <p class="eyebrow">LiveWell by Zurich · Product development</p>
+      <h1>LiveWell <span>product development</span></h1>
+      <p class="ds-case-lede">I improved how people track their daily habits and see their progress, from active
+        trackers on
+        the Dashboard to calendars and charts in Insights. My work covered both interaction design and Flutter
+        implementation.</p>
+      <dl class="ds-role-grid">
+        <div>
+          <dt>My role</dt>
+          <dd>Senior Flutter Developer<br>Feature design &amp; implementation</dd>
+        </div>
+        <div>
+          <dt>Main focus</dt>
+          <dd>Trackers, animations &amp; progress views</dd>
+        </div>
+        <div>
+          <dt>Additional contributions</dt>
+          <dd>Rewards improvements &amp; Social Sharing</dd>
+        </div>
+      </dl>
+    </section>
+
+    <nav class="ds-section-nav section-shell" aria-label="LiveWell product case study sections">
+      <a href="#trackers">Dashboard &amp; Insights</a>
+      <a href="#rewards-sharing">Rewards &amp; Sharing</a>
+      <a href="#product-context">Product context</a>
+    </nav>
+
+    <section id="trackers" class="ds-components section-shell">
+      <div class="ds-section-heading">
+        <p class="eyebrow">Dashboard &amp; Insights</p>
+        <h2>Daily check-ins and progress over time</h2>
+        <p>The Dashboard gives people a place to see highlights and act on their current goals. Insights gives those
+          same
+          habits a longer view, so people can see how they have been doing over days and weeks.</p>
+      </div>
+
+      <div class="lw-product-screens">
+        <figure class="ds-component-figure">
+          <a class="lw-phone" href="assets/livewell-product-home.png">
+            <span class="lw-phone-screen"
+              style="--screen-ratio: 537 / 1068; --screen-width: 119.739292%; --screen-left: -10.242086%; --screen-top: -21.441948%;">
+              <img src="assets/livewell-product-home.png" width="643" height="1394"
+                alt="LiveWell Dashboard showing daily activities, progress and highlights for stress, movement and sleep" />
+            </span>
+          </a>
+          <figcaption>Dashboard with daily activities, highlights and active trackers.</figcaption>
+        </figure>
+        <figure class="ds-component-figure">
+          <a class="lw-phone" href="assets/lw-screen-2.jpg">
+            <span class="lw-phone-screen"
+              style="--screen-ratio: 540 / 1074; --screen-width: 119.074074%; --screen-left: -9.629630%; --screen-top: -21.508380%;">
+              <img src="assets/lw-screen-2.jpg" width="1284" height="2778" loading="lazy"
+                alt="LiveWell Insights with weekly performance, tracking categories and progress streaks" />
+            </span>
+          </a>
+          <figcaption>Insights with weekly performance and streaks.</figcaption>
+        </figure>
+      </div>
+
+      <div class="ds-detail-grid">
+        <article>
+          <h3>Tracker design and code</h3>
+          <p>I refined the design of the tracker UI across Dashboard and Insights and simplified the Flutter
+            implementation
+            behind it. The two views serve different needs: a quick check-in today and a closer look at progress over
+            time.</p>
+        </article>
+        <article>
+          <h3>Animation and feedback</h3>
+          <p>I paid particular attention to animation in the trackers, using motion to make changes in state and
+            progress
+            easier to follow as people interact with them.</p>
+        </article>
+        <article>
+          <h3>Calendars and charts</h3>
+          <p>I integrated trackers into an interactive calendar and chart views. Users could tap a date to add tracker
+            data, then use the charts to see patterns over time.</p>
+        </article>
+      </div>
+
+      <div class="lw-calendar-detail">
+        <div class="ds-prose">
+          <p class="eyebrow">Insights · Calendar view</p>
+          <h3>See the month or week, log a day</h3>
+          <p>The insights view brings the chart and calendar together. The chart summarises recorded
+            tracker data, while the calendar gives users a place to choose a date and add an entry.</p>
+        </div>
+        <figure class="ds-component-figure">
+          <div class="lw-phone lw-calendar-phone">
+            <div class="lw-phone-screen">
+              <div class="lw-calendar-scroll" tabindex="0" role="region" aria-label="Scrollable Insights screenshot"
+                aria-describedby="lw-calendar-caption">
+                <img src="assets/livewell-product-calendar.png" width="375" height="1266" loading="lazy"
+                  alt="LiveWell Insights with the mood tracker, monthly mood chart and calendar with highlighted dates" />
+              </div>
+            </div>
+          </div>
+
+        </figure>
+      </div>
+    </section>
+
+
+    <section id="product-context" class="ds-components section-shell lw-product-context">
+      <div class="ds-section-heading">
+        <p class="eyebrow">Product context</p>
+        <h2>How the features fit together</h2>
+        <p>LiveWell brought goal setting, activity tracking and motivation into one wellbeing app. Onboarding helped
+          users
+          select personal health goals, and Dashboard turned those goals into a daily view of activities and active
+          trackers.</p>
+      </div>
+      <div class="ds-detail-grid">
+        <article>
+          <h3>Goals and daily tracking</h3>
+          <p>Users could monitor habits and progress in Insights. Connections to services such as Apple Health and
+            Google Fit helped bring activity data into the experience.</p>
+        </article>
+        <article>
+          <h3>Boosts and Health Points</h3>
+          <p>Users could discover and join individual or team Boosts. Health Points earned through activities could be
+            spent in Rewards. Social Sharing later added a social network within LiveWell.</p>
+        </article>
+        <article>
+          <h3>Explore and health services</h3>
+          <p>Explore brought together articles, videos, meditations and polls. It also provided routes to health checks,
+            health scans and telemedicine consultations.</p>
+        </article>
+      </div>
+
+      <div class="lw-product-screens lw-product-explore">
+        <figure class="ds-component-figure">
+          <a class="lw-phone" href="assets/livewell-product-explore.webp">
+            <span class="lw-phone-screen"
+              style="--screen-ratio: 375 / 747; --screen-width: 171.466667%; --screen-left: -34.666667%; --screen-top: -70.013387%;">
+              <img src="assets/livewell-product-explore.webp" width="643" height="1394" loading="lazy"
+                alt="Explore Browse screen featuring workout videos and articles" />
+            </span>
+          </a>
+          <figcaption>Explore’s content catalogue.</figcaption>
+        </figure>
+        <figure class="ds-component-figure">
+          <a class="lw-phone" href="assets/livewell-product-checks.webp">
+            <span class="lw-phone-screen"
+              style="--screen-ratio: 537 / 1070; --screen-width: 119.739292%; --screen-left: -9.497207%; --screen-top: -21.495327%;">
+              <img src="assets/livewell-product-checks.webp" width="643" height="1394" loading="lazy"
+                alt="Explore Checks screen with general, mental, social and financial health check options" />
+            </span>
+          </a>
+          <figcaption>Health checks within Explore.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+
+    <section id="rewards-sharing" class="ds-components section-shell lw-product-rewards">
+      <div class="travel-map">
+        <div class="ds-prose">
+          <p class="eyebrow">Rewards &amp; Social Sharing</p>
+          <h2>What happens after an activity</h2>
+          <h3>Rewards improvements</h3>
+          <p>LiveWell’s Health Points connected activities to a rewards catalogue. I contributed Flutter improvements to
+            the Rewards experience, where people could browse options such as gift cards, donations and downloadable
+            content.</p>
+          <h3>Social Sharing</h3>
+          <p>I implemented Social Sharing in Flutter, adding a social network within LiveWell where users could connect
+            and share with each other inside the app.</p>
+        </div>
+        <figure class="ds-component-figure">
+          <a class="lw-phone" href="assets/livewell-product-rewards.webp">
+            <span class="lw-phone-screen"
+              style="--screen-ratio: 537 / 1070; --screen-width: 119.739292%; --screen-left: -10.614525%; --screen-top: -21.588785%;">
+              <img src="assets/livewell-product-rewards.webp" width="643" height="1394" loading="lazy"
+                alt="Rewards screen showing the Health Points balance and reward categories" />
+            </span>
+          </a>
+          <figcaption>Rewards catalogue with point costs and redemption categories.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="ds-end section-shell">
+      <h2>The shared components behind the app</h2>
+      <p>I also built the Flutter component library and helped shape the Figma foundations used in LiveWell.</p>
+      <a class="ds-text-link" href="livewell-design-system.html">Explore the LiveWell Design System</a>
+    </section>
+  </main>
+
+  <footer class="site-footer section-shell">
+    <span>Ann-Sofi Lantz</span><span>Senior Flutter Engineer · Barcelona</span><a href="#top">Back to top</a>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>

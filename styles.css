@@ -959,3 +959,113 @@ a:focus-visible { outline: 3px solid var(--accent); outline-offset: 6px; }
 @media (max-width: 700px) {
   .travel-map { grid-template-columns: 1fr; }
 }
+
+/* LiveWell product development */
+.livewell-product-feature { padding-top: 45px; scroll-margin-top: 80px; }
+.livewell-product-feature .ds-case-link { background: #fff; }
+.livewell-product-feature .ds-case-link img { max-height: 400px; }
+.lw-product-page .ds-components { padding-block: clamp(48px, 7vw, 90px); }
+.lw-product-screens {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(28px, 5vw, 64px);
+  padding: clamp(18px, 4vw, 48px);
+  background: var(--accent-soft);
+  align-items: start;
+}
+.lw-product-page .lw-phone {
+  position: relative;
+  width: min(72%, 240px);
+  margin: 18px auto 28px;
+  padding: 5px;
+  border: 1px solid #6a7073;
+  border-radius: 15% / 7.5%;
+  background: linear-gradient(125deg, #52585b, #131719 35%, #2d3336 72%, #0f1112);
+  box-shadow: -4px 5px 0 #272c2e, -8px 12px 15px #10292230;
+  transform: rotate(var(--phone-tilt, -9deg));
+  transition: transform .2s ease;
+}
+.lw-product-page .lw-phone:hover, .lw-product-page .lw-phone:focus-visible { transform: rotate(0); }
+.lw-product-page .lw-phone:hover { outline: none; }
+.lw-product-page figure:nth-child(even) .lw-phone { --phone-tilt: 6deg; }
+.lw-product-page .lw-phone-screen {
+  position: relative;
+  display: block;
+  box-sizing: content-box;
+  overflow: hidden;
+  aspect-ratio: var(--screen-ratio);
+  border: 3px solid #101314;
+  border-radius: 14% / 7%;
+  background: #93ddd1;
+}
+.lw-phone-screen::after {
+  position: absolute;
+  top: 1.2%;
+  left: 35%;
+  width: 30%;
+  height: 2.6%;
+  content: "";
+  background: #101314;
+  border-radius: 999px;
+  pointer-events: none;
+}
+.lw-product-page .lw-phone-screen img {
+  position: absolute;
+  top: var(--screen-top);
+  left: var(--screen-left);
+  width: var(--screen-width);
+  max-width: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .lw-product-page .lw-phone { transition: none; }
+}
+.lw-product-screens figcaption { justify-content: center; text-align: center; }
+.lw-product-page .ds-detail-grid { margin-bottom: 0; }
+.lw-product-rewards, .lw-product-context { border-top: 1px solid var(--line); }
+.lw-product-rewards figure { width: 100%; max-width: 330px; justify-self: center; }
+.lw-product-explore { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 32px; }
+@media (max-width: 600px) {
+  .livewell-product-feature .ds-case-link img { max-height: 300px; }
+  .lw-product-screens { grid-template-columns: 1fr; }
+}
+
+.lw-calendar-detail {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(24px, 5vw, 64px);
+  margin-top: 38px;
+  padding: clamp(24px, 5vw, 64px);
+  background: var(--accent-soft);
+  border-radius: 12px;
+}
+.lw-calendar-detail .ds-prose { max-width: 390px; }
+.lw-calendar-detail figure { width: min(100%, 300px); justify-self: center; }
+.lw-calendar-detail figcaption { justify-content: center; text-align: center; }
+.lw-product-page .lw-calendar-phone {
+  width: min(100%, 268px);
+  transform: none;
+  transition: none;
+}
+.lw-calendar-phone .lw-phone-screen {
+  --screen-ratio: 375 / 790;
+}
+.lw-calendar-phone .lw-phone-screen::after { z-index: 1; }
+.lw-calendar-scroll {
+  position: absolute;
+  inset: 0;
+  overflow-y: auto;
+}
+.lw-calendar-scroll:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -3px;
+}
+.lw-product-page .lw-calendar-scroll img {
+  position: static;
+  width: 100%;
+  border: 0;
+  border-radius: 0;
+}
+@media (max-width: 700px) {
+  .lw-calendar-detail { grid-template-columns: minmax(0, 1fr); }
+}
